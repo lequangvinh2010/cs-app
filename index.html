@@ -25,16 +25,16 @@
   --r:14px;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
-html,body{height:100%;background:var(--bg);color:var(--t1);font-family:var(--f);-webkit-font-smoothing:antialiased;overflow:hidden}
+html,body{height:100%;height:-webkit-fill-available;background:var(--bg);color:var(--t1);font-family:var(--f);-webkit-font-smoothing:antialiased;overflow:hidden}
 button{cursor:pointer;font-family:var(--f);border:none;background:none;color:inherit}
 input,select,textarea{font-family:var(--f)}
 
 /* ── SHELL & PAGES ── */
-.shell{display:flex;flex-direction:column;height:100svh;height:100vh}
-.pages{flex:1;overflow:hidden;position:relative}
+.shell{display:flex;flex-direction:column;height:100svh;height:-webkit-fill-available;min-height:-webkit-fill-available}
+.pages{flex:1;overflow:hidden;position:relative;min-height:0}
 .page{position:absolute;inset:0;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;display:none;background:var(--bg)}
 .page.active{display:block}
-.page-inner{padding:14px 14px calc(14px + var(--sb))}
+.page-inner{padding:14px 14px calc(var(--sb) + 80px)}
 @media(min-width:768px){.page-inner{max-width:820px;margin:0 auto}}
 
 /* ── HEADER ── */
@@ -70,7 +70,7 @@ input,select,textarea{font-family:var(--f)}
 .rt-dot{width:5px;height:5px;border-radius:50%;background:var(--green);animation:pg 2s infinite;flex-shrink:0}
 
 /* ── BOTTOM NAV ── */
-.bnav{flex-shrink:0;display:flex;background:rgba(9,9,12,.93);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-top:1px solid var(--b1);padding:5px 0 calc(5px + var(--sb))}
+.bnav{flex-shrink:0;display:flex;background:rgba(9,9,12,.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-top:1px solid var(--b1);padding:6px 0 calc(6px + var(--sb));position:relative;z-index:100}
 .ntab{flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;padding:5px 2px;color:var(--t3);transition:color .15s}
 .ntab.active{color:var(--blue)}
 .ni{font-size:20px;line-height:1}
