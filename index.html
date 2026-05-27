@@ -416,10 +416,24 @@ input,select,textarea{font-family:var(--f)}
     <!-- AREA BI -->
     <div id="bi-area" class="page-inner" style="padding-top:14px">
 
+      <!-- STAFF SECTION — ĐẦU TIÊN -->
+      <div style="font-size:10px;font-weight:800;color:var(--t3);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px">👥 Nhân sự toàn khu vực</div>
+      <div style="background:var(--s1);border:1px solid var(--b1);border-radius:var(--r);overflow:hidden;margin-bottom:14px">
+        <div id="bi-staff-summary" onclick="toggleStaffList()" style="padding:14px 15px;display:flex;align-items:center;gap:10px;cursor:pointer;user-select:none;-webkit-user-select:none">
+          <div style="font-size:26px">👥</div>
+          <div style="flex:1">
+            <div id="bi-staff-kpi" style="font-size:14px;font-weight:800"></div>
+            <div style="font-size:11px;color:var(--t3);margin-top:2px">Bấm để xem danh sách đầy đủ</div>
+          </div>
+          <div id="bi-staff-chevron" style="font-size:18px;color:var(--t3);transition:transform .2s">›</div>
+        </div>
+        <div id="bi-staff-list" style="display:none;border-top:1px solid var(--b1)"></div>
+      </div>
+
       <!-- KPI strip -->
       <div id="bi-kpi-row" style="display:grid;grid-template-columns:repeat(2,1fr);gap:9px;margin-bottom:14px"></div>
 
-      <!-- SHOP STATUS OVERVIEW — core focus -->
+      <!-- SHOP STATUS OVERVIEW -->
       <div style="font-size:10px;font-weight:800;color:var(--t3);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px">📍 Tình trạng 13 Shop</div>
       <div id="bi-shop-status" style="margin-bottom:14px"></div>
 
@@ -437,25 +451,9 @@ input,select,textarea{font-family:var(--f)}
         <div id="bi-chain-bars"></div>
       </div>
 
-      <!-- HEALTH MATRIX -->
+      <!-- ALERTS -->
       <div style="font-size:10px;font-weight:800;color:var(--t3);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px">⚡ Cảnh báo cần xử lý</div>
       <div id="bi-alerts" style="margin-bottom:14px"></div>
-
-      <!-- STAFF SECTION — collapsible -->
-      <div style="font-size:10px;font-weight:800;color:var(--t3);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px">👥 Nhân sự toàn khu vực</div>
-      <div style="background:var(--s1);border:1px solid var(--b1);border-radius:var(--r);overflow:hidden;margin-bottom:14px">
-        <!-- Summary row — always visible -->
-        <div id="bi-staff-summary" onclick="toggleStaffList()" style="padding:13px 15px;display:flex;align-items:center;gap:10px;cursor:pointer;user-select:none">
-          <div style="font-size:24px">👥</div>
-          <div style="flex:1">
-            <div id="bi-staff-kpi" style="font-size:14px;font-weight:800"></div>
-            <div style="font-size:10px;color:var(--t3);margin-top:2px">Bấm để xem danh sách đầy đủ</div>
-          </div>
-          <div id="bi-staff-chevron" style="font-size:16px;color:var(--t3);transition:transform .2s">›</div>
-        </div>
-        <!-- Full list — hidden by default -->
-        <div id="bi-staff-list" style="display:none;border-top:1px solid var(--b1)"></div>
-      </div>
 
     </div>
 
@@ -489,13 +487,13 @@ input,select,textarea{font-family:var(--f)}
   <div class="page" id="page-detail">
     <div class="detail-hdr">
       <button class="back-btn" onclick="goBack()">‹</button>
-      <div>
+      <div style="flex:1;min-width:0">
         <div class="dh-title" id="dhTitle">—</div>
-        <div style="font-size:10px;color:var(--t3);margin-top:2px;font-family:var(--m)" id="dhMeta">—</div>
+        <div style="font-size:10px;color:var(--t3);margin-top:2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" id="dhMeta">—</div>
       </div>
-      <div class="dh-chain" id="dhChain">—</div>
+      <div class="dh-chain" id="dhChain"></div>
     </div>
-    <div class="page-inner" style="padding-top:12px" id="detailContent"></div>
+    <div class="page-inner" id="detailContent"></div>
   </div>
 
   <!-- NHẬP LIỆU -->
@@ -1028,12 +1026,14 @@ function goTab(name){
 function goDetail(shopId){
   prevPage=document.querySelector('.page.active')?.id?.replace('page-','')||'home';
   showPage('detail');
-  // Render shop detail
   const shop=SHOPS.find(s=>s.id===shopId);
   if(!shop) return;
+  // Set header
   document.getElementById('dhTitle').textContent=shop.sh;
   document.getElementById('dhMeta').textContent=shop.name;
-  document.getElementById('dhChain').innerHTML=chainLogo(shop.chain,22);
+  const dhChain=document.getElementById('dhChain');
+  if(dhChain) dhChain.innerHTML=chainLogo(shop.chain,22);
+  // Render shop BI into detailContent
   renderShopBI(shopId,'detailContent');
 }
 
@@ -1052,23 +1052,28 @@ let scheduleData = JSON.parse(localStorage.getItem('asm_sched')||'[]');
 
 function parseDate(raw){
   if(!raw) return null;
-  const s=String(raw).replace(/[\u00a0\u200b]/g,' ').trim();
+  const s=String(raw).replace(/[\u00a0\u200b\ufeff]/g,' ').trim();
+  // d/m/yyyy or dd/mm/yyyy or d-m-yyyy
   const m1=s.match(/^(\d{1,2})[\/\-](\d{1,2})[\/\-](\d{4})$/);
   if(m1) return `${m1[3]}-${m1[2].padStart(2,'0')}-${m1[1].padStart(2,'0')}`;
+  // yyyy-mm-dd
   const m2=s.match(/^(\d{4})[\/\-](\d{2})[\/\-](\d{2})$/);
   if(m2) return `${m2[1]}-${m2[2]}-${m2[3]}`;
+  // Excel serial number
   const n=parseFloat(s);
-  if(!isNaN(n)&&n>40000&&n<60000){ const d=new Date(Math.round((n-25569)*86400*1000)); if(!isNaN(d.getTime())) return d.toISOString().split('T')[0]; }
+  if(!isNaN(n)&&n>40000&&n<60000){
+    const d=new Date(Math.round((n-25569)*86400*1000));
+    if(!isNaN(d.getTime())) return d.toISOString().split('T')[0];
+  }
   return null;
 }
 
 function parseSlot(raw){
   if(!raw) return null;
-  const s=String(raw).replace(/[\u00a0]/g,' ').trim().toLowerCase();
-  const s2=s.normalize('NFD').replace(/[\u0300-\u036f]/g,'');
-  if(s2==='s'||s2.startsWith('sang')||s2.startsWith('morning')) return 'S';
-  if(s2==='c'||s2.startsWith('chieu')||s2.startsWith('afternoon')) return 'C';
-  if(s2==='t'||s2.startsWith('toi')||s2.startsWith('evening')) return 'T';
+  const s=removeAccents(String(raw).replace(/[\u00a0]/g,' ').trim());
+  if(s==='S'||s.startsWith('SANG')||s.startsWith('MORNING')||s==='SA') return 'S';
+  if(s==='C'||s.startsWith('CHIEU')||s.startsWith('AFTERNOON')||s==='CH') return 'C';
+  if(s==='T'||s.startsWith('TOI')||s.startsWith('EVENING')||s==='TO') return 'T';
   return null;
 }
 
@@ -1078,17 +1083,59 @@ function isDayOff(raw){
   return s.includes('day off')||s.includes('dayoff')||s.includes('leave')||s.includes('nghi')||s.includes('nghỉ')||s==='x'||s==='0';
 }
 
+// ── Accent removal helper ──
+function removeAccents(s){
+  return s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toUpperCase().trim();
+}
+
+// ── Unique keyword map per shop (appleId → keywords that only belong to that shop) ──
+const SHOP_KEYWORDS = {
+  3812804: ['TRAN QUANG KHAI','TQK','15 TRAN'],
+  1472500: ['159 TRAN PHU','KGG 159'],
+  1588036: ['QL 80','CU XA MOI','QL80'],
+  3876467: ['177 NGUYEN TRUNG TRUC','177 NTT'],
+  1471542: ['380A','2_KGI'],
+  1470521: ['MAI THI HONG HANH','MTHH','01 MAI'],
+  1472786: ['261 NGUYEN TRUNG TRUC','261 NTT'],
+  3815060: ['THUA DAT','DUONG DONG','SO 20','PHU QUOC','DD'],
+  1776623: ['NGUYEN VAN CU','AN THOI','KHU PHO','79 NGUYEN'],
+  3986491: ['35 HUNG VUONG','HUNG VUONG','PHU QUOC'],
+  1471243: ['KGI - DUONG DONG','KGI-DUONG'],
+  1470693: ['KGI - AN THOI','KGI-AN THOI'],
+  3767110: ['TOPZONE','AAR_KGI'],
+};
+
 function matchShop(name){
   if(!name) return null;
-  const n=name.trim().toLowerCase();
-  let s=SHOPS.find(x=>x.name.toLowerCase()===n);
-  if(s) return s;
-  s=SHOPS.find(x=>x.sh.toLowerCase()===n);
-  if(s) return s;
-  // partial match on meaningful words
-  const words=n.split(/[\s@,\-_()]+/).filter(w=>w.length>3);
-  s=SHOPS.find(x=>{ const sn=x.name.toLowerCase(); return words.some(w=>sn.includes(w)); });
-  return s||null;
+  const n = removeAccents(name.replace(/\s+/g,' ').trim());
+
+  // 1. Try exact match (accent-normalized)
+  let found = SHOPS.find(s => removeAccents(s.name) === n);
+  if(found) return found;
+
+  // 2. Try sh (short name) match
+  found = SHOPS.find(s => removeAccents(s.sh) === n);
+  if(found) return found;
+
+  // 3. Try unique keyword match (highest priority for disambiguation)
+  // Score each shop by unique keyword hits
+  const scores = SHOPS.map(s => {
+    const kws = SHOP_KEYWORDS[s.appleId] || [];
+    const hits = kws.filter(kw => n.includes(removeAccents(kw))).length;
+    return {s, hits};
+  }).filter(x => x.hits > 0).sort((a,b) => b.hits - a.hits);
+
+  if(scores.length > 0) return scores[0].s;
+
+  // 4. Word overlap fallback
+  const words = n.split(/[\s@,\-_()/]+/).filter(w => w.length >= 3);
+  const wordScores = SHOPS.map(s => {
+    const sn = removeAccents(s.name);
+    const matched = words.filter(w => sn.includes(w)).length;
+    return {s, matched};
+  }).filter(x => x.matched > 0).sort((a,b) => b.matched - a.matched);
+
+  return wordScores.length > 0 ? wordScores[0].s : null;
 }
 
 function downloadSample(){
@@ -1815,24 +1862,93 @@ function renderShopBI(shopId, containerId){
     <div style="font-size:10px;font-weight:800;color:var(--t3);text-transform:uppercase;letter-spacing:.7px;margin-bottom:12px">🎯 Target ${q}</div>
     ${pB('📱 iPhone',act.iphone,tgt.iphone)}${pB('📟 iPad',act.ipad,tgt.ipad)}${pB('💻 Mac',act.mac,tgt.mac)}${pB('⌚ AW',act.aw,tgt.aw)}${pB('🎧 AirPods',act.ap,tgt.ap)}
   </div>
-  ${last?`<div style="background:var(--s1);border:1px solid var(--b1);border-radius:var(--r);padding:13px;margin-bottom:12px">
-    <div style="font-size:10px;font-weight:800;color:var(--t3);text-transform:uppercase;letter-spacing:.7px;margin-bottom:10px">📅 Visit gần nhất · ${last.date}</div>
-    ${[['POSM',last.posm],['Demo',last.demo],['Tồn kho',last.stock],['Thái độ NV',last.staff],['Brand đẩy',last.brand]].filter(r=>r[1]).map(([k,v])=>`<div style="display:flex;align-items:center;gap:8px;padding:7px 0;border-bottom:1px solid var(--b1)"><span style="font-size:11px;color:var(--t3);min-width:90px">${k}</span><span style="font-size:12px;font-weight:700">${v}</span></div>`).join('')}
-    ${last.action?`<div style="background:var(--od);border-radius:9px;padding:9px 11px;margin-top:8px;font-size:11px;color:var(--orange)">⚡ ${last.action}</div>`:''}
-  </div>`:`<div style="text-align:center;padding:16px;color:var(--t3);font-size:12px">Chưa có dữ liệu visit</div>`}
+  ${last||Object.keys(getShopBI(shopId).stock||{}).length?`<div style="background:var(--s1);border:1px solid var(--b1);border-radius:var(--r);padding:13px;margin-bottom:12px">
+    <div style="font-size:10px;font-weight:800;color:var(--t3);text-transform:uppercase;letter-spacing:.7px;margin-bottom:10px">📋 Tình trạng shop${last?` · ${last.date}`:''}</div>
+    ${(()=>{
+      const bi=getShopBI(shopId);
+      const rows=[];
+      const posm=last?.posm||bi.posm?.posm; if(posm) rows.push(['📌 POSM',posm]);
+      const demo=last?.demo||bi.posm?.demo; if(demo) rows.push(['📱 Demo',demo]);
+      const zone=last?.zone||bi.posm?.zone; if(zone) rows.push(['🗺 Apple zone',zone]);
+      const stock=last?.stock||(bi.stock?.iphone); if(stock) rows.push(['📦 Tồn kho',stock]);
+      const staff=last?.staff||bi.staff_attitude; if(staff) rows.push(['👥 Thái độ NV',staff]);
+      const brand=last?.brand; if(brand) rows.push(['🏷 Brand đẩy',brand]);
+      if(!rows.length) return `<div style="color:var(--t3);font-size:12px;text-align:center;padding:8px">Chưa có dữ liệu — bấm ✏️ Nhập liệu</div>`;
+      return rows.map(([k,v])=>`<div style="display:flex;align-items:center;gap:8px;padding:7px 0;border-bottom:1px solid var(--b1)"><span style="font-size:11px;color:var(--t3);min-width:100px">${k}</span><span style="font-size:12px;font-weight:700">${v}</span></div>`).join('');
+    })()}
+    ${(getShopBI(shopId).note||last?.action)?`<div style="background:var(--od);border-radius:9px;padding:9px 11px;margin-top:8px;font-size:11px;color:var(--orange)">⚡ ${getShopBI(shopId).note||last?.action}</div>`:''}
+  </div>`:`<div style="background:var(--s1);border:1px solid var(--b1);border-radius:var(--r);padding:16px;margin-bottom:12px;text-align:center">
+    <div style="font-size:28px;margin-bottom:8px">📋</div>
+    <div style="font-size:13px;font-weight:700;color:var(--t2)">Chưa có dữ liệu</div>
+    <div style="font-size:11px;color:var(--t3);margin-top:4px">Bấm ✏️ Nhập liệu để thêm thông tin</div>
+  </div>`}
   <div style="background:var(--s1);border:1px solid var(--b1);border-radius:var(--r);overflow:hidden;margin-bottom:12px">
     <div style="background:var(--s2);padding:10px 13px;border-bottom:1px solid var(--b1);font-size:10px;font-weight:800;color:var(--t3);text-transform:uppercase;letter-spacing:.7px">👥 Nhân sự</div>
     <div id="shopBIStaffList-${shopId}"></div>
   </div>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-bottom:10px">
-    <button onclick="exportShopSample(${shopId})" style="padding:13px;border-radius:12px;background:var(--bd);border:1px solid rgba(10,132,255,.3);color:var(--blue);font-size:12px;font-weight:800;cursor:pointer;font-family:var(--f)">📥 Xuất file mẫu</button>
-    <button onclick="document.getElementById('shopBIInput-${shopId}').click()" style="padding:13px;border-radius:12px;background:var(--gd);border:1px solid rgba(48,209,88,.3);color:var(--green);font-size:12px;font-weight:800;cursor:pointer;font-family:var(--f)">📤 Nhập liệu</button>
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:10px">
+    <button onclick="exportShopSample(${shopId})" style="padding:12px 8px;border-radius:12px;background:var(--bd);border:1px solid rgba(10,132,255,.3);color:var(--blue);font-size:11px;font-weight:800;cursor:pointer;font-family:var(--f)">📥 File mẫu</button>
+    <button onclick="document.getElementById('shopBIInput-${shopId}').click()" style="padding:12px 8px;border-radius:12px;background:var(--s1);border:1px solid var(--b1);color:var(--t2);font-size:11px;font-weight:800;cursor:pointer;font-family:var(--f)">📤 Upload CSV</button>
+    <button onclick="toggleShopEditForm(${shopId})" style="padding:12px 8px;border-radius:12px;background:var(--gd);border:1px solid rgba(48,209,88,.3);color:var(--green);font-size:11px;font-weight:800;cursor:pointer;font-family:var(--f)">✏️ Nhập tay</button>
   </div>
   <input type="file" id="shopBIInput-${shopId}" accept=".csv" style="display:none" onchange="handleShopBIUpload(event,${shopId})">
+
+  <!-- EDIT FORM — hidden by default -->
+  <div id="shopEditForm-${shopId}" style="display:none;background:var(--s1);border:1px solid var(--b1);border-radius:var(--r);padding:14px;margin-bottom:12px">
+    <div style="font-size:11px;font-weight:800;color:var(--t1);margin-bottom:12px">✏️ Nhập liệu thủ công</div>
+
+    <div style="font-size:10px;font-weight:700;color:var(--t3);margin-bottom:8px;text-transform:uppercase;letter-spacing:.5px">📦 Tồn kho</div>
+    ${['iPhone','iPad','Mac','Apple Watch','AirPods'].map((p,i)=>{
+      const key=['iphone','ipad','mac','aw','airpods'][i];
+      const cur=getShopBI(shopId).stock?.[key]||'';
+      return`<div style="display:flex;align-items:center;gap:8px;margin-bottom:7px">
+        <div style="font-size:12px;min-width:90px;font-weight:600">${p}</div>
+        <select id="edit-stock-${shopId}-${key}" style="flex:1;padding:8px 10px;background:var(--s2);border:1px solid var(--b1);border-radius:8px;color:var(--t1);font-size:12px;font-family:var(--f);outline:none">
+          <option value="">— Chọn —</option>
+          ${['Tốt','Thấp','Trung bình','Hết hàng'].map(o=>`<option${cur===o?' selected':''}>${o}</option>`).join('')}
+        </select>
+      </div>`;
+    }).join('')}
+
+    <div style="font-size:10px;font-weight:700;color:var(--t3);margin:12px 0 8px;text-transform:uppercase;letter-spacing:.5px">📌 Trưng bày & Demo</div>
+    ${[['POSM','posm'],['Demo device','demo'],['Apple zone','zone']].map(([l,k])=>{
+      const cur=getShopBI(shopId).posm?.[k]||'';
+      return`<div style="display:flex;align-items:center;gap:8px;margin-bottom:7px">
+        <div style="font-size:12px;min-width:90px;font-weight:600">${l}</div>
+        <select id="edit-posm-${shopId}-${k}" style="flex:1;padding:8px 10px;background:var(--s2);border:1px solid var(--b1);border-radius:8px;color:var(--t1);font-size:12px;font-family:var(--f);outline:none">
+          <option value="">— Chọn —</option>
+          ${['Tốt','Thiếu một số','Không có','Lỗi/Hỏng'].map(o=>`<option${cur===o?' selected':''}>${o}</option>`).join('')}
+        </select>
+      </div>`;
+    }).join('')}
+
+    <div style="font-size:10px;font-weight:700;color:var(--t3);margin:12px 0 8px;text-transform:uppercase;letter-spacing:.5px">👥 Thái độ nhân sự</div>
+    <div style="display:flex;align-items:center;gap:8px;margin-bottom:7px">
+      <div style="font-size:12px;min-width:90px;font-weight:600">Staff</div>
+      <select id="edit-staff-${shopId}" style="flex:1;padding:8px 10px;background:var(--s2);border:1px solid var(--b1);border-radius:8px;color:var(--t1);font-size:12px;font-family:var(--f);outline:none">
+        <option value="">— Chọn —</option>
+        ${['Rất tích cực','Tích cực','Trung lập','Tiêu cực'].map(o=>`<option${(getShopBI(shopId).staff_attitude||'')===o?' selected':''}>${o}</option>`).join('')}
+      </select>
+    </div>
+
+    <div style="font-size:10px;font-weight:700;color:var(--t3);margin:12px 0 8px;text-transform:uppercase;letter-spacing:.5px">📝 Ghi chú</div>
+    <textarea id="edit-note-${shopId}" placeholder="Ghi chú về shop..." style="width:100%;padding:10px;background:var(--s2);border:1px solid var(--b1);border-radius:9px;color:var(--t1);font-size:12px;font-family:var(--f);outline:none;resize:none;min-height:72px;line-height:1.5">${getShopBI(shopId).note||''}</textarea>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px">
+      <button onclick="toggleShopEditForm(${shopId})" style="padding:12px;border-radius:11px;background:var(--s2);border:1px solid var(--b1);color:var(--t2);font-size:12px;font-weight:700;cursor:pointer;font-family:var(--f)">Huỷ</button>
+      <button onclick="saveShopEditForm(${shopId})" style="padding:12px;border-radius:11px;background:var(--blue);border:none;color:white;font-size:12px;font-weight:800;cursor:pointer;font-family:var(--f)">💾 Lưu</button>
+    </div>
+  </div>
+
   <button onclick="exportAreaBI()" style="width:100%;padding:13px;border-radius:12px;background:var(--s2);border:1px solid var(--b1);color:var(--t2);font-size:12px;font-weight:700;cursor:pointer;font-family:var(--f);margin-bottom:16px">🗂 Xuất file tổng khu vực</button>`;
-  document.getElementById('bi-shop-content').innerHTML=html;
-  setTimeout(()=>{const staffEl=document.getElementById(`shopBIStaffList-${shopId}`);if(staffEl)renderShopStaffList(shop,staffEl);},50);
-  Object.keys(shopBICharts).forEach(k=>{try{shopBICharts[k].destroy();}catch(e){}});shopBICharts={};
+  const _cont=document.getElementById(_cid);
+  if(_cont) _cont.innerHTML=html;
+  setTimeout(()=>{
+    const staffEl=document.getElementById(`shopBIStaffList-${shopId}`);
+    if(staffEl) renderShopStaffList(shop,staffEl);
+  },50);
+  Object.keys(shopBICharts).forEach(k=>{try{shopBICharts[k].destroy();}catch(e){}});
+  shopBICharts={};
 }
 
 function renderTeamBI(){
@@ -2077,7 +2193,62 @@ function exportScheduleCSV(){
 }
 
 
-// ── Export functions ──
+// ── Shop manual edit form ──
+function toggleShopEditForm(shopId){
+  const el=document.getElementById(`shopEditForm-${shopId}`);
+  if(!el) return;
+  const visible=el.style.display!=='none';
+  el.style.display=visible?'none':'block';
+  if(!visible) el.scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+
+function saveShopEditForm(shopId){
+  const bi=getShopBI(shopId);
+  // Stock
+  if(!bi.stock) bi.stock={};
+  ['iphone','ipad','mac','aw','airpods'].forEach(k=>{
+    const el=document.getElementById(`edit-stock-${shopId}-${k}`);
+    if(el&&el.value) bi.stock[k]=el.value;
+  });
+  // POSM/Display
+  if(!bi.posm) bi.posm={};
+  ['posm','demo','zone'].forEach(k=>{
+    const el=document.getElementById(`edit-posm-${shopId}-${k}`);
+    if(el&&el.value) bi.posm[k]=el.value;
+  });
+  // Staff attitude
+  const staffEl=document.getElementById(`edit-staff-${shopId}`);
+  if(staffEl&&staffEl.value) bi.staff_attitude=staffEl.value;
+  // Note
+  const noteEl=document.getElementById(`edit-note-${shopId}`);
+  if(noteEl) bi.note=noteEl.value;
+
+  saveShopBI(shopId,bi);
+
+  // Also create a visit record with this data
+  const shop=SHOPS.find(s=>s.id===shopId);
+  const existing=visits.find(v=>v.shop_id===shopId&&v.date===today());
+  if(!existing&&shop){
+    visits.push({
+      id:Date.now(), shop_id:shopId, shop_name:shop.name, sh:shop.sh,
+      chain:shop.chain, reg:shop.reg, date:today(), time:new Date().toLocaleTimeString('vi-VN',{hour:'2-digit',minute:'2-digit'}),
+      iphone:0,ipad:0,mac:0,acc:0,
+      posm:bi.posm?.posm||'—', demo:bi.posm?.demo||'—',
+      zone:bi.posm?.zone||'—', stock:bi.stock?.iphone||'—',
+      staff:bi.staff_attitude||'—', brand:'Apple',
+      action:bi.note||'', score:0,
+    });
+    localStorage.setItem('asm_v',JSON.stringify(visits));
+  }
+
+  toggleShopEditForm(shopId);
+  toast('✅ Đã lưu · '+shop?.sh);
+  // Re-render to show updated data
+  const cid=document.getElementById('detailContent')?'detailContent':'bi-shop-content';
+  renderShopBI(shopId,cid);
+}
+
+
 function exportAreaBI(){
   const q=curQLabel();
   const rows=['﻿# Area BI Export — '+q, 'Shop;AppleID;Chain;Region;iPhone Target;iPhone Actual;Att%'];
