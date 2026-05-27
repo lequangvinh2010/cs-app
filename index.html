@@ -34,7 +34,7 @@ input,select,textarea{font-family:var(--f)}
 .pages{flex:1;overflow:hidden;position:relative;min-height:0}
 .page{position:absolute;inset:0;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;display:none;background:var(--bg)}
 .page.active{display:block}
-.page-inner{padding:14px 14px calc(var(--sb) + 76px)}
+.page-inner{padding:23px 14px calc(var(--sb) + 76px)}
 @media(min-width:768px){.page-inner{max-width:820px;margin:0 auto}}
 
 /* ── HEADER ── */
@@ -44,11 +44,11 @@ input,select,textarea{font-family:var(--f)}
   border-bottom:1px solid var(--b1);z-index:40;position:relative;
 }
 .hdr-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:9px}
-.hdr-left{display:flex;align-items:center;gap:10px}
-.apple-mark{width:32px;height:32px;border-radius:8px;background:linear-gradient(145deg,#1a1a2e,#16213e);border:1px solid var(--b2);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.hdr-left{display:flex;align-items:center;gap:17px}
+.apple-mark{width:32px;height:32px;border-radius:13px;background:linear-gradient(145deg,#1a1a2e,#16213e);border:1px solid var(--b2);display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .apple-mark svg{width:17px;height:17px}
-.hdr-name{font-size:15px;font-weight:800;letter-spacing:-.3px}
-.hdr-role{font-size:10px;color:var(--blue);font-weight:700;text-transform:uppercase;letter-spacing:.6px;margin-top:1px}
+.hdr-name{font-size:25px;font-weight:800;letter-spacing:-.3px}
+.hdr-role{font-size:17px;color:var(--blue);font-weight:700;text-transform:uppercase;letter-spacing:.6px;margin-top:1px}
 
 /* clock */
 .clock-wrap{display:flex;flex-direction:column;align-items:center;cursor:pointer;flex-shrink:0}
@@ -59,172 +59,172 @@ input,select,textarea{font-family:var(--f)}
 .ck-arc.warn{stroke:var(--orange)}
 .ck-arc.danger{stroke:var(--red);animation:blink 1s infinite}
 .ck-ctr{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
-.ck-time{font-size:12px;font-weight:800;font-family:var(--m)}
-.ck-idle{font-size:9px;font-weight:700;color:var(--t3);font-family:var(--m)}
+.ck-time{font-size:20px;font-weight:800;font-family:var(--m)}
+.ck-idle{font-size:15px;font-weight:700;color:var(--t3);font-family:var(--m)}
 
 /* date strip */
-.date-strip{display:flex;align-items:center;gap:5px}
-.dp{background:var(--s1);border:1px solid var(--b1);border-radius:7px;padding:5px 10px;font-size:11px;font-weight:700;font-family:var(--m);color:var(--t2)}
+.date-strip{display:flex;align-items:center;gap:8px}
+.dp{background:var(--s1);border:1px solid var(--b1);border-radius:12px;padding:8px 10px;font-size:19px;font-weight:700;font-family:var(--m);color:var(--t2)}
 .dp.hi{background:var(--bd);border-color:rgba(10,132,255,.28);color:var(--blue)}
-.dt-sep{font-size:10px;color:var(--t3)}
+.dt-sep{font-size:17px;color:var(--t3)}
 .rt-dot{width:5px;height:5px;border-radius:50%;background:var(--green);animation:pg 2s infinite;flex-shrink:0}
 
 /* ── BOTTOM NAV ── */
-.bnav{flex-shrink:0;display:flex;background:rgba(9,9,12,.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-top:1px solid var(--b1);padding:4px 0 calc(4px + var(--sb));position:relative;z-index:100}
-.ntab{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;padding:8px 2px;color:var(--t3);transition:color .15s;min-height:48px;justify-content:center}
+.bnav{flex-shrink:0;display:flex;background:rgba(9,9,12,.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-top:1px solid var(--b1);padding:6px 0 calc(4px + var(--sb));position:relative;z-index:100}
+.ntab{flex:1;display:flex;flex-direction:column;align-items:center;gap:5px;padding:13px 2px;color:var(--t3);transition:color .15s;min-height:48px;justify-content:center}
 .ntab.active{color:var(--blue)}
-.ni{font-size:20px;line-height:1}
-.nl{font-size:10px;font-weight:700;letter-spacing:.3px}
-.ni{font-size:20px;line-height:1}
-.nl{font-size:9px;font-weight:700;letter-spacing:.2px}
+.ni{font-size:34px;line-height:1}
+.nl{font-size:17px;font-weight:700;letter-spacing:.3px}
+.ni{font-size:34px;line-height:1}
+.nl{font-size:15px;font-weight:700;letter-spacing:.2px}
 
 /* ── SECTION LABEL ── */
-.sl{font-size:10px;font-weight:800;color:var(--t3);text-transform:uppercase;letter-spacing:1px;margin:16px 0 8px;display:flex;align-items:center;justify-content:space-between}
+.sl{font-size:17px;font-weight:800;color:var(--t3);text-transform:uppercase;letter-spacing:1px;margin:27px 0 8px;display:flex;align-items:center;justify-content:space-between}
 .sl:first-child{margin-top:2px}
-.sl-badge{font-size:10px;font-weight:700;font-family:var(--m);background:var(--s1);border:1px solid var(--b1);padding:2px 7px;border-radius:5px;color:var(--t2);letter-spacing:0}
+.sl-badge{font-size:17px;font-weight:700;font-family:var(--m);background:var(--s1);border:1px solid var(--b1);padding:4px 7px;border-radius:8px;color:var(--t2);letter-spacing:0}
 
 /* ── TOP ROW ── */
-.top-row{display:flex;gap:11px;margin-bottom:14px}
+.top-row{display:flex;gap:18px;margin-bottom:14px}
 
 /* Avatar */
-.avatar-card{width:84px;flex-shrink:0;background:var(--s1);border:1px solid var(--b1);border-radius:var(--r);padding:12px 8px;display:flex;flex-direction:column;align-items:center;gap:6px}
-.av-circle{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--blue),#0057b8);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:800;color:white;border:2px solid rgba(10,132,255,.4)}
-.av-name{font-size:9px;font-weight:800;color:var(--t2);text-align:center;line-height:1.3;text-transform:uppercase;letter-spacing:.3px}
-.av-badge{font-size:8px;font-weight:700;background:var(--bd);color:var(--blue);padding:2px 6px;border-radius:5px}
+.avatar-card{width:84px;flex-shrink:0;background:var(--s1);border:1px solid var(--b1);border-radius:var(--r);padding:21px 8px;display:flex;flex-direction:column;align-items:center;gap:10px}
+.av-circle{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--blue),#0057b8);display:flex;align-items:center;justify-content:center;font-size:30px;font-weight:800;color:white;border:2px solid rgba(10,132,255,.4)}
+.av-name{font-size:15px;font-weight:800;color:var(--t2);text-align:center;line-height:1.3;text-transform:uppercase;letter-spacing:.3px}
+.av-badge{font-size:14px;font-weight:700;background:var(--bd);color:var(--blue);padding:4px 6px;border-radius:8px}
 
 /* Schedule table */
 .sched-card{flex:1;min-width:0;background:var(--s1);border:1px solid var(--b1);border-radius:var(--r);overflow:hidden}
 /* 5 cols: Ca | Shop | Visit btn | Kế hoạch | ✓ */
 .sc-hdr{display:grid;grid-template-columns:48px 1fr 56px 1fr 30px;background:var(--s2);border-bottom:1px solid var(--b1)}
-.sc-th{padding:6px 6px;font-size:8px;font-weight:800;color:var(--t3);text-transform:uppercase;letter-spacing:.5px;border-right:1px solid var(--b1)}
+.sc-th{padding:10px 6px;font-size:14px;font-weight:800;color:var(--t3);text-transform:uppercase;letter-spacing:.5px;border-right:1px solid var(--b1)}
 .sc-th:last-child{border-right:none;text-align:center}
 .sc-row{display:grid;grid-template-columns:48px 1fr 56px 1fr 30px;border-bottom:1px solid var(--b1);transition:background .15s}
 .sc-row:last-child{border-bottom:none}
 .sc-row.done-row{opacity:.5}
-.sc-cell{padding:8px 6px;border-right:1px solid var(--b1);display:flex;align-items:center}
+.sc-cell{padding:13px 6px;border-right:1px solid var(--b1);display:flex;align-items:center}
 .sc-cell:last-child{border-right:none;justify-content:center}
-.slot-lbl{font-size:8px;font-weight:800;padding:2px 5px;border-radius:5px;font-family:var(--m);text-transform:uppercase}
+.slot-lbl{font-size:14px;font-weight:800;padding:4px 5px;border-radius:8px;font-family:var(--m);text-transform:uppercase}
 .sl-s{background:rgba(255,159,10,.15);color:var(--orange)}
 .sl-c{background:rgba(10,132,255,.15);color:var(--blue)}
 .sl-t{background:rgba(191,90,242,.15);color:var(--purple)}
-.sc-shopname{font-size:11px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sc-shopname{font-size:19px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 
 /* Visit button inside table */
 .visit-btn{
-  width:48px;height:26px;border-radius:7px;
+  width:48px;height:26px;border-radius:12px;
   background:var(--s2);border:1px solid var(--b2);
-  font-size:9px;font-weight:700;color:var(--t2);
+  font-size:15px;font-weight:700;color:var(--t2);
   display:flex;align-items:center;justify-content:center;
-  cursor:pointer;transition:all .15s;gap:3px;
+  cursor:pointer;transition:all .15s;gap:5px;
 }
 .visit-btn:active{transform:scale(.93)}
 .visit-btn.active-visit{background:var(--bd);border-color:rgba(10,132,255,.4);color:var(--blue)}
 .visit-btn.done-visit{background:var(--gd);border-color:rgba(48,209,88,.3);color:var(--green)}
 
 /* criteria bar */
-.crit-bar{height:4px;border-radius:2px;background:var(--t4);flex:1;overflow:hidden}
-.crit-fill{height:100%;border-radius:2px;background:var(--blue);transition:width .5s ease}
+.crit-bar{height:4px;border-radius:4px;background:var(--t4);flex:1;overflow:hidden}
+.crit-fill{height:100%;border-radius:4px;background:var(--blue);transition:width .5s ease}
 
-.check-box{width:20px;height:20px;border-radius:6px;border:1.5px solid var(--b2);display:flex;align-items:center;justify-content:center;font-size:11px;cursor:pointer;transition:all .15s;flex-shrink:0}
+.check-box{width:20px;height:20px;border-radius:10px;border:1.5px solid var(--b2);display:flex;align-items:center;justify-content:center;font-size:19px;cursor:pointer;transition:all .15s;flex-shrink:0}
 .check-box.on{background:var(--gd);border-color:var(--green);color:var(--green)}
 
 /* realtime strip */
-.rt-strip{display:flex;align-items:center;gap:7px;background:var(--s1);border:1px solid var(--b1);border-radius:10px;padding:8px 12px;margin-bottom:10px;font-size:11px;color:var(--t2)}
+.rt-strip{display:flex;align-items:center;gap:12px;background:var(--s1);border:1px solid var(--b1);border-radius:17px;padding:13px 12px;margin-bottom:10px;font-size:19px;color:var(--t2)}
 
 /* ── SHOP LIST ── */
-.shop-list{display:flex;flex-direction:column;gap:7px}
-.shop-item{display:flex;align-items:center;gap:11px;padding:14px;border-radius:14px;background:var(--s1);border:1px solid var(--b1);cursor:pointer;transition:all .15s;animation:fu .3s ease both;margin-bottom:8px}
+.shop-list{display:flex;flex-direction:column;gap:12px}
+.shop-item{display:flex;align-items:center;gap:18px;padding:23px;border-radius:23px;background:var(--s1);border:1px solid var(--b1);cursor:pointer;transition:all .15s;animation:fu .3s ease both;margin-bottom:8px}
 .shop-item:active{background:var(--s2);transform:scale(.98)}
 .shop-item.visited-today{border-color:rgba(48,209,88,.22)}
 .shop-item.active-now{border-color:rgba(10,132,255,.4);background:var(--bd)}
-.sh-rank{width:28px;height:28px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;font-family:var(--m);flex-shrink:0;background:var(--t4);color:var(--t3)}
+.sh-rank{width:28px;height:28px;border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:19px;font-weight:800;font-family:var(--m);flex-shrink:0;background:var(--t4);color:var(--t3)}
 .sh-rank.r1{background:rgba(255,159,10,.18);color:var(--orange)}
 .sh-rank.r2{background:rgba(255,255,255,.07);color:var(--t2)}
 .sh-rank.r3{background:rgba(191,90,242,.14);color:var(--purple)}
 .sh-info{flex:1;min-width:0}
-.sh-name{font-size:13px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.sh-meta{font-size:11px;color:var(--t3);margin-top:3px}
+.sh-name{font-size:22px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sh-meta{font-size:19px;color:var(--t3);margin-top:3px}
 .sh-right{text-align:right;flex-shrink:0}
-.sh-so{font-size:15px;font-weight:800;font-family:var(--m);color:var(--blue)}
-.sh-status{font-size:9px;font-weight:700;padding:3px 8px;border-radius:6px;margin-top:3px;display:inline-block}
-.sh-delta{font-size:9px;font-family:var(--m);margin-top:2px}
+.sh-so{font-size:25px;font-weight:800;font-family:var(--m);color:var(--blue)}
+.sh-status{font-size:15px;font-weight:700;padding:5px 8px;border-radius:10px;margin-top:3px;display:inline-block}
+.sh-delta{font-size:15px;font-family:var(--m);margin-top:2px}
 
 /* ── SHOP DETAIL PAGE ── */
 .detail-hdr{
   padding:calc(var(--st)+12px) 16px 12px;
   background:rgba(9,9,12,.9);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);
-  border-bottom:1px solid var(--b1);display:flex;align-items:center;gap:12px;
+  border-bottom:1px solid var(--b1);display:flex;align-items:center;gap:21px;
   position:sticky;top:0;z-index:40;flex-shrink:0;
 }
-.back-btn{width:40px;height:40px;border-radius:11px;background:var(--s1);border:1px solid var(--b1);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;cursor:pointer;transition:all .15s}
+.back-btn{width:40px;height:40px;border-radius:18px;background:var(--s1);border:1px solid var(--b1);display:flex;align-items:center;justify-content:center;font-size:34px;flex-shrink:0;cursor:pointer;transition:all .15s}
 .back-btn:active{background:var(--s2);transform:scale(.93)}
-.dh-title{font-size:15px;font-weight:800;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.dh-chain{font-size:10px;font-weight:700;padding:3px 9px;border-radius:6px;flex-shrink:0}
+.dh-title{font-size:25px;font-weight:800;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.dh-chain{font-size:17px;font-weight:700;padding:5px 9px;border-radius:10px;flex-shrink:0}
 
 /* detail kpi row */
-.d-kpi-row{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-bottom:12px}
+.d-kpi-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:12px}
 @media(min-width:500px){.d-kpi-row{grid-template-columns:repeat(4,1fr)}}
-.d-kpi{background:var(--s1);border:1px solid var(--b1);border-radius:var(--r);padding:13px;position:relative;overflow:hidden}
+.d-kpi{background:var(--s1);border:1px solid var(--b1);border-radius:var(--r);padding:22px;position:relative;overflow:hidden}
 .d-kpi-acc{position:absolute;top:0;left:0;right:0;height:2px}
-.d-kpi-lbl{font-size:10px;color:var(--t3);font-weight:700;text-transform:uppercase;letter-spacing:.4px;margin-bottom:6px}
-.d-kpi-val{font-size:22px;font-weight:900;font-family:var(--m);letter-spacing:-1px;line-height:1}
-.d-kpi-sub{font-size:10px;color:var(--t3);margin-top:4px}
+.d-kpi-lbl{font-size:17px;color:var(--t3);font-weight:700;text-transform:uppercase;letter-spacing:.4px;margin-bottom:6px}
+.d-kpi-val{font-size:37px;font-weight:900;font-family:var(--m);letter-spacing:-1px;line-height:1}
+.d-kpi-sub{font-size:17px;color:var(--t3);margin-top:4px}
 
 /* detail sections */
-.d-sec{background:var(--s1);border:1px solid var(--b1);border-radius:var(--r);padding:14px;margin-bottom:10px}
-.d-sec-title{font-size:10px;font-weight:800;color:var(--t3);text-transform:uppercase;letter-spacing:.7px;margin-bottom:12px}
-.d-row{display:flex;gap:10px;padding:8px 0;border-bottom:1px solid var(--b1);font-size:12px}
+.d-sec{background:var(--s1);border:1px solid var(--b1);border-radius:var(--r);padding:23px;margin-bottom:10px}
+.d-sec-title{font-size:17px;font-weight:800;color:var(--t3);text-transform:uppercase;letter-spacing:.7px;margin-bottom:12px}
+.d-row{display:flex;gap:17px;padding:13px 0;border-bottom:1px solid var(--b1);font-size:20px}
 .d-row:last-child{border-bottom:none}
 .d-key{color:var(--t3);min-width:110px;flex-shrink:0}
 .d-val{font-weight:600;flex:1}
 .chart-wrap{height:160px;position:relative}
 
 /* visit history in detail */
-.vh-item{padding:11px 12px;border-radius:11px;background:var(--s2);border:1px solid var(--b1);margin-bottom:7px}
+.vh-item{padding:18px 12px;border-radius:18px;background:var(--s2);border:1px solid var(--b1);margin-bottom:7px}
 .vh-hdr{display:flex;justify-content:space-between;margin-bottom:6px}
-.vh-date{font-size:11px;font-weight:700;font-family:var(--m)}
-.vh-so{font-size:14px;font-weight:800;font-family:var(--m);color:var(--blue)}
-.vh-tags{display:flex;gap:5px;flex-wrap:wrap}
-.vh-tag{font-size:9px;font-weight:700;padding:2px 6px;border-radius:5px;font-family:var(--m)}
-.vh-action{font-size:11px;color:var(--orange);margin-top:6px}
+.vh-date{font-size:19px;font-weight:700;font-family:var(--m)}
+.vh-so{font-size:24px;font-weight:800;font-family:var(--m);color:var(--blue)}
+.vh-tags{display:flex;gap:8px;flex-wrap:wrap}
+.vh-tag{font-size:15px;font-weight:700;padding:4px 6px;border-radius:8px;font-family:var(--m)}
+.vh-action{font-size:19px;color:var(--orange);margin-top:6px}
 
 /* checkin btn in detail */
 .detail-checkin-btn{
-  width:100%;padding:15px;border-radius:var(--r);background:var(--blue);
-  color:white;font-size:14px;font-weight:800;cursor:pointer;margin-bottom:12px;
+  width:100%;padding:26px;border-radius:var(--r);background:var(--blue);
+  color:white;font-size:24px;font-weight:800;cursor:pointer;margin-bottom:12px;
   transition:all .15s;letter-spacing:-.2px;
 }
 .detail-checkin-btn:active{opacity:.85;transform:scale(.98)}
 
 /* ── NHẬP LIỆU TAB ── */
-.nl-month-strip{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;margin-bottom:14px;scrollbar-width:none}
+.nl-month-strip{display:flex;gap:13px;overflow-x:auto;padding-bottom:4px;margin-bottom:14px;scrollbar-width:none}
 .nl-month-strip::-webkit-scrollbar{display:none}
-.month-chip{padding:7px 14px;border-radius:9px;background:var(--s1);border:1px solid var(--b1);font-size:12px;font-weight:700;color:var(--t2);white-space:nowrap;transition:all .15s;cursor:pointer;flex-shrink:0}
+.month-chip{padding:12px 14px;border-radius:16px;background:var(--s1);border:1px solid var(--b1);font-size:20px;font-weight:700;color:var(--t2);white-space:nowrap;transition:all .15s;cursor:pointer;flex-shrink:0}
 .month-chip.active{background:var(--bd);border-color:rgba(10,132,255,.35);color:var(--blue)}
 
-.nl-shop-item{background:var(--s1);border:1px solid var(--b1);border-radius:var(--r);padding:14px;margin-bottom:9px}
-.nl-shop-hdr{display:flex;align-items:center;gap:10px;margin-bottom:12px;cursor:pointer}
-.nl-toggle{font-size:12px;color:var(--t3);transition:transform .2s}
+.nl-shop-item{background:var(--s1);border:1px solid var(--b1);border-radius:var(--r);padding:23px;margin-bottom:9px}
+.nl-shop-hdr{display:flex;align-items:center;gap:17px;margin-bottom:12px;cursor:pointer}
+.nl-toggle{font-size:20px;color:var(--t3);transition:transform .2s}
 .nl-toggle.open{transform:rotate(90deg)}
 .nl-fields{display:none}
 .nl-fields.open{display:block}
-.nl-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-bottom:9px}
-.nl-field{display:flex;flex-direction:column;gap:4px}
-.nl-lbl{font-size:11px;font-weight:700;color:var(--t2)}
-.nl-input{padding:9px 11px;background:rgba(255,255,255,.06);border:1px solid var(--b2);border-radius:10px;color:var(--t1);font-size:13px;font-weight:700;outline:none;transition:border-color .2s;font-family:var(--m);-webkit-appearance:none}
+.nl-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:9px}
+.nl-field{display:flex;flex-direction:column;gap:6px}
+.nl-lbl{font-size:19px;font-weight:700;color:var(--t2)}
+.nl-input{padding:16px 11px;background:rgba(255,255,255,.06);border:1px solid var(--b2);border-radius:17px;color:var(--t1);font-size:22px;font-weight:700;outline:none;transition:border-color .2s;font-family:var(--m);-webkit-appearance:none}
 .nl-input:focus{border-color:var(--blue);background:rgba(10,132,255,.07)}
 .nl-input::placeholder{color:var(--t3);font-weight:400}
-.nl-save-btn{width:100%;padding:11px;border-radius:10px;background:var(--blue);color:white;font-size:13px;font-weight:700;cursor:pointer;transition:all .15s;margin-top:4px}
+.nl-save-btn{width:100%;padding:18px;border-radius:17px;background:var(--blue);color:white;font-size:22px;font-weight:700;cursor:pointer;transition:all .15s;margin-top:4px}
 .nl-save-btn:active{opacity:.85}
-.nl-saved-badge{display:inline-flex;align-items:center;gap:4px;font-size:10px;font-weight:700;padding:3px 8px;border-radius:6px;background:var(--gd);color:var(--green);font-family:var(--m)}
+.nl-saved-badge{display:inline-flex;align-items:center;gap:6px;font-size:17px;font-weight:700;padding:5px 8px;border-radius:10px;background:var(--gd);color:var(--green);font-family:var(--m)}
 
 /* ── TIMER SHEET ── */
 .overlay{position:fixed;inset:0;background:rgba(0,0,0,.55);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);z-index:100;display:none;align-items:flex-end}
 .overlay.open{display:flex}
-.sheet{width:100%;background:#161619;border-radius:22px 22px 0 0;border-top:1px solid var(--b2);padding:7px 18px calc(18px + var(--sb));animation:su .22s ease;max-height:88vh;overflow-y:auto}
-.handle{width:32px;height:3px;background:var(--t4);border-radius:2px;margin:0 auto 14px}
-.sh-title{font-size:16px;font-weight:800;margin-bottom:14px}
-.tbig-wrap{text-align:center;padding:10px 0 14px}
+.sheet{width:100%;background:#161619;border-radius:38px 22px 0 0;border-top:1px solid var(--b2);padding:12px 18px calc(18px + var(--sb));animation:su .22s ease;max-height:88vh;overflow-y:auto}
+.handle{width:32px;height:3px;background:var(--t4);border-radius:4px;margin:0 auto 14px}
+.sh-title{font-size:27px;font-weight:800;margin-bottom:14px}
+.tbig-wrap{text-align:center;padding:17px 0 14px}
 .tbig-ring{display:inline-block;position:relative;width:120px;height:120px}
 .tb-svg{width:120px;height:120px}
 .tb-bg{fill:none;stroke:rgba(255,255,255,.06);stroke-width:7}
@@ -232,46 +232,46 @@ input,select,textarea{font-family:var(--f)}
 .tb-arc.warn{stroke:var(--orange)}
 .tb-arc.danger{stroke:var(--red);animation:blink 1s infinite}
 .tb-ctr{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
-.tb-time{font-size:30px;font-weight:900;font-family:var(--m);letter-spacing:-2px}
-.tb-lbl{font-size:10px;color:var(--t3);margin-top:2px}
-.tb-shop{font-size:14px;font-weight:800;margin-top:8px}
-.tm-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}
-.tm-cell{background:var(--s1);border:1px solid var(--b1);border-radius:11px;padding:11px;font-size:11px}
+.tb-time{font-size:51px;font-weight:900;font-family:var(--m);letter-spacing:-2px}
+.tb-lbl{font-size:17px;color:var(--t3);margin-top:2px}
+.tb-shop{font-size:24px;font-weight:800;margin-top:8px}
+.tm-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin-top:12px}
+.tm-cell{background:var(--s1);border:1px solid var(--b1);border-radius:18px;padding:18px;font-size:19px}
 .tm-lbl{color:var(--t3);margin-bottom:3px}
 .tm-val{font-weight:700;font-family:var(--m)}
-.sh-btn{width:100%;padding:13px;border-radius:13px;font-size:13px;font-weight:700;cursor:pointer;margin-top:8px;font-family:var(--f);transition:all .15s}
+.sh-btn{width:100%;padding:22px;border-radius:22px;font-size:22px;font-weight:700;cursor:pointer;margin-top:8px;font-family:var(--f);transition:all .15s}
 .sh-btn:active{opacity:.85}
 .btn-ci{background:var(--blue);color:white}
 .btn-out{background:var(--rd);color:var(--red);border:1px solid rgba(255,69,58,.3)}
 .btn-cl{background:var(--s1);color:var(--t2);border:1px solid var(--b1)}
 
 /* ── TOAST ── */
-.toast{position:fixed;bottom:calc(64px + var(--sb) + 8px);left:50%;transform:translateX(-50%) translateY(14px);opacity:0;background:#22222c;border:1px solid var(--b2);color:var(--t1);padding:9px 16px;border-radius:12px;font-size:12px;font-weight:700;white-space:nowrap;transition:all .26s;z-index:300}
+.toast{position:fixed;bottom:calc(64px + var(--sb) + 8px);left:50%;transform:translateX(-50%) translateY(14px);opacity:0;background:#22222c;border:1px solid var(--b2);color:var(--t1);padding:16px 16px;border-radius:21px;font-size:20px;font-weight:700;white-space:nowrap;transition:all .26s;z-index:300}
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
 
 /* ── CONFIRM DIALOG ── */
 .dlg-bg{
   position:fixed;inset:0;background:rgba(0,0,0,.65);
   backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
-  z-index:400;display:none;align-items:center;justify-content:center;padding:20px;
+  z-index:400;display:none;align-items:center;justify-content:center;padding:34px;
 }
 .dlg-bg.open{display:flex}
 .dlg{
   background:#1c1c22;border:1px solid var(--b2);
-  border-radius:20px;padding:24px 20px 20px;
+  border-radius:34px;padding:40px 20px 20px;
   width:100%;max-width:320px;
   animation:dlg-in .2s cubic-bezier(.34,1.56,.64,1) both;
   text-align:center;
 }
-.dlg-icon{font-size:36px;margin-bottom:10px;line-height:1}
-.dlg-title{font-size:15px;font-weight:800;margin-bottom:6px;letter-spacing:-.2px}
-.dlg-body{font-size:13px;color:var(--t2);line-height:1.55;margin-bottom:18px}
+.dlg-icon{font-size:61px;margin-bottom:10px;line-height:1}
+.dlg-title{font-size:25px;font-weight:800;margin-bottom:6px;letter-spacing:-.2px}
+.dlg-body{font-size:22px;color:var(--t2);line-height:1.55;margin-bottom:18px}
 .dlg-shop{color:var(--t1);font-weight:700}
-.dlg-warn{background:var(--od);border:1px solid rgba(255,159,10,.3);border-radius:9px;padding:9px 12px;font-size:12px;color:var(--orange);margin-bottom:14px;text-align:left;line-height:1.5}
-.dlg-btns{display:flex;gap:10px}
+.dlg-warn{background:var(--od);border:1px solid rgba(255,159,10,.3);border-radius:16px;padding:16px 12px;font-size:20px;color:var(--orange);margin-bottom:14px;text-align:left;line-height:1.5}
+.dlg-btns{display:flex;gap:17px}
 .dlg-btn{
-  flex:1;padding:13px;border-radius:13px;
-  font-size:14px;font-weight:800;cursor:pointer;
+  flex:1;padding:22px;border-radius:22px;
+  font-size:24px;font-weight:800;cursor:pointer;
   font-family:var(--f);transition:all .15s;border:none;
 }
 .dlg-btn:active{transform:scale(.96);opacity:.85}
@@ -323,7 +323,7 @@ input,select,textarea{font-family:var(--f)}
     <div class="dt-sep">·</div>
     <div class="dp" id="dYr">—</div>
     <div style="flex:1"></div>
-    <div class="dp" id="dTime" style="font-size:10px">—</div>
+    <div class="dp" id="dTime" style="font-size:13px">—</div>
   </div>
 </header>
 
@@ -363,37 +363,37 @@ input,select,textarea{font-family:var(--f)}
       <div class="rt-strip">
         <div class="rt-dot"></div>
         <span style="font-weight:700;color:var(--t1)">Realtime</span>
-        <span style="font-size:10px">· Cập nhật theo ngày từ mục nhập liệu · <span id="lastUpd" style="color:var(--green);font-family:var(--m)">—</span></span>
+        <span style="font-size:13px">· Cập nhật theo ngày từ mục nhập liệu · <span id="lastUpd" style="color:var(--green);font-family:var(--m)">—</span></span>
       </div>
 
       <!-- Chain filter tabs -->
-      <div id="chainFilterBar" style="display:flex;gap:6px;overflow-x:auto;padding-bottom:4px;margin-bottom:10px;scrollbar-width:none;-webkit-overflow-scrolling:touch">
+      <div id="chainFilterBar" style="display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;margin-bottom:10px;scrollbar-width:none;-webkit-overflow-scrolling:touch">
         <button onclick="setChainFilter('ALL')" id="cf-ALL"
-          style="padding:6px 14px;border-radius:20px;font-size:11px;font-weight:700;border:1.5px solid var(--blue);background:var(--blue);color:white;cursor:pointer;white-space:nowrap;font-family:var(--f);flex-shrink:0;transition:all .15s">
+          style="padding:8px 14px;border-radius:26px;font-size:14px;font-weight:700;border:1.5px solid var(--blue);background:var(--blue);color:white;cursor:pointer;white-space:nowrap;font-family:var(--f);flex-shrink:0;transition:all .15s">
           Tất cả
         </button>
         <button onclick="setChainFilter('FStudio')" id="cf-FStudio"
-          style="padding:6px 14px;border-radius:20px;font-size:11px;font-weight:700;border:1.5px solid #0a84ff;background:transparent;color:#0a84ff;cursor:pointer;white-space:nowrap;font-family:var(--f);flex-shrink:0;transition:all .15s">
+          style="padding:8px 14px;border-radius:26px;font-size:14px;font-weight:700;border:1.5px solid #0a84ff;background:transparent;color:#0a84ff;cursor:pointer;white-space:nowrap;font-family:var(--f);flex-shrink:0;transition:all .15s">
           FStudio
         </button>
         <button onclick="setChainFilter('FPT')" id="cf-FPT"
-          style="padding:6px 14px;border-radius:20px;font-size:11px;font-weight:700;border:1.5px solid #ff6a00;background:transparent;color:#ff6a00;cursor:pointer;white-space:nowrap;font-family:var(--f);flex-shrink:0;transition:all .15s">
+          style="padding:8px 14px;border-radius:26px;font-size:14px;font-weight:700;border:1.5px solid #ff6a00;background:transparent;color:#ff6a00;cursor:pointer;white-space:nowrap;font-family:var(--f);flex-shrink:0;transition:all .15s">
           FPT
         </button>
         <button onclick="setChainFilter('CPS')" id="cf-CPS"
-          style="padding:6px 14px;border-radius:20px;font-size:11px;font-weight:700;border:1.5px solid #e8192c;background:transparent;color:#e8192c;cursor:pointer;white-space:nowrap;font-family:var(--f);flex-shrink:0;transition:all .15s">
+          style="padding:8px 14px;border-radius:26px;font-size:14px;font-weight:700;border:1.5px solid #e8192c;background:transparent;color:#e8192c;cursor:pointer;white-space:nowrap;font-family:var(--f);flex-shrink:0;transition:all .15s">
           CPS
         </button>
         <button onclick="setChainFilter('MWG')" id="cf-MWG"
-          style="padding:6px 14px;border-radius:20px;font-size:11px;font-weight:700;border:1.5px solid #0063be;background:transparent;color:#0063be;cursor:pointer;white-space:nowrap;font-family:var(--f);flex-shrink:0;transition:all .15s">
+          style="padding:8px 14px;border-radius:26px;font-size:14px;font-weight:700;border:1.5px solid #0063be;background:transparent;color:#0063be;cursor:pointer;white-space:nowrap;font-family:var(--f);flex-shrink:0;transition:all .15s">
           MWG
         </button>
         <button onclick="setChainFilter('Viettel')" id="cf-Viettel"
-          style="padding:6px 14px;border-radius:20px;font-size:11px;font-weight:700;border:1.5px solid #d7292c;background:transparent;color:#d7292c;cursor:pointer;white-space:nowrap;font-family:var(--f);flex-shrink:0;transition:all .15s">
+          style="padding:8px 14px;border-radius:26px;font-size:14px;font-weight:700;border:1.5px solid #d7292c;background:transparent;color:#d7292c;cursor:pointer;white-space:nowrap;font-family:var(--f);flex-shrink:0;transition:all .15s">
           Viettel
         </button>
         <button onclick="setChainFilter('TopZone')" id="cf-TopZone"
-          style="padding:6px 14px;border-radius:20px;font-size:11px;font-weight:700;border:1.5px solid #64d2ff;background:transparent;color:#64d2ff;cursor:pointer;white-space:nowrap;font-family:var(--f);flex-shrink:0;transition:all .15s">
+          style="padding:8px 14px;border-radius:26px;font-size:14px;font-weight:700;border:1.5px solid #64d2ff;background:transparent;color:#64d2ff;cursor:pointer;white-space:nowrap;font-family:var(--f);flex-shrink:0;transition:all .15s">
           TopZone
         </button>
       </div>
@@ -406,10 +406,10 @@ input,select,textarea{font-family:var(--f)}
   <div class="page" id="page-analytics">
 
     <!-- Sub-nav -->
-    <div style="display:flex;gap:0;margin:12px 14px 0;border-radius:12px;overflow:hidden;border:1px solid var(--b1);flex-shrink:0">
-      <button id="bi-tab-area" onclick="switchBiTab('area')" style="flex:1;padding:10px;font-size:11px;font-weight:700;border:none;cursor:pointer;transition:all .15s;font-family:var(--f);background:var(--blue);color:white">🗺 Khu vực</button>
-      <button id="bi-tab-shop" onclick="switchBiTab('shop')" style="flex:1;padding:10px;font-size:11px;font-weight:700;border:none;cursor:pointer;transition:all .15s;font-family:var(--f);background:var(--s1);color:var(--t2);border-left:1px solid var(--b1)">🏪 Shop BI</button>
-      <button id="bi-tab-team" onclick="switchBiTab('team')" style="flex:1;padding:10px;font-size:11px;font-weight:700;border:none;cursor:pointer;transition:all .15s;font-family:var(--f);background:var(--s1);color:var(--t2);border-left:1px solid var(--b1)">👥 Virtual Team</button>
+    <div style="display:flex;gap:0;margin:16px 14px 0;border-radius:16px;overflow:hidden;border:1px solid var(--b1);flex-shrink:0">
+      <button id="bi-tab-area" onclick="switchBiTab('area')" style="flex:1;padding:13px;font-size:14px;font-weight:700;border:none;cursor:pointer;transition:all .15s;font-family:var(--f);background:var(--blue);color:white">🗺 Khu vực</button>
+      <button id="bi-tab-shop" onclick="switchBiTab('shop')" style="flex:1;padding:13px;font-size:14px;font-weight:700;border:none;cursor:pointer;transition:all .15s;font-family:var(--f);background:var(--s1);color:var(--t2);border-left:1px solid var(--b1)">🏪 Shop BI</button>
+      <button id="bi-tab-team" onclick="switchBiTab('team')" style="flex:1;padding:13px;font-size:14px;font-weight:700;border:none;cursor:pointer;transition:all .15s;font-family:var(--f);background:var(--s1);color:var(--t2);border-left:1px solid var(--b1)">👥 Virtual Team</button>
 
     </div>
 
@@ -417,42 +417,42 @@ input,select,textarea{font-family:var(--f)}
     <div id="bi-area" class="page-inner" style="padding-top:14px">
 
       <!-- STAFF SECTION — ĐẦU TIÊN -->
-      <div style="font-size:10px;font-weight:800;color:var(--t3);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px">👥 Nhân sự toàn khu vực</div>
+      <div style="font-size:13px;font-weight:800;color:var(--t3);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px">👥 Nhân sự toàn khu vực</div>
       <div style="background:var(--s1);border:1px solid var(--b1);border-radius:var(--r);overflow:hidden;margin-bottom:14px">
-        <div id="bi-staff-summary" onclick="toggleStaffList()" style="padding:14px 15px;display:flex;align-items:center;gap:10px;cursor:pointer;user-select:none;-webkit-user-select:none">
-          <div style="font-size:26px">👥</div>
+        <div id="bi-staff-summary" onclick="toggleStaffList()" style="padding:18px 15px;display:flex;align-items:center;gap:13px;cursor:pointer;user-select:none;-webkit-user-select:none">
+          <div style="font-size:34px">👥</div>
           <div style="flex:1">
-            <div id="bi-staff-kpi" style="font-size:14px;font-weight:800"></div>
-            <div style="font-size:11px;color:var(--t3);margin-top:2px">Bấm để xem danh sách đầy đủ</div>
+            <div id="bi-staff-kpi" style="font-size:18px;font-weight:800"></div>
+            <div style="font-size:14px;color:var(--t3);margin-top:2px">Bấm để xem danh sách đầy đủ</div>
           </div>
-          <div id="bi-staff-chevron" style="font-size:18px;color:var(--t3);transition:transform .2s">›</div>
+          <div id="bi-staff-chevron" style="font-size:23px;color:var(--t3);transition:transform .2s">›</div>
         </div>
         <div id="bi-staff-list" style="display:none;border-top:1px solid var(--b1)"></div>
       </div>
 
       <!-- KPI strip -->
-      <div id="bi-kpi-row" style="display:grid;grid-template-columns:repeat(2,1fr);gap:9px;margin-bottom:14px"></div>
+      <div id="bi-kpi-row" style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:14px"></div>
 
       <!-- SHOP STATUS OVERVIEW -->
-      <div style="font-size:10px;font-weight:800;color:var(--t3);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px">📍 Tình trạng 13 Shop</div>
+      <div style="font-size:13px;font-weight:800;color:var(--t3);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px">📍 Tình trạng 13 Shop</div>
       <div id="bi-shop-status" style="margin-bottom:14px"></div>
 
       <!-- REGION SPLIT -->
-      <div style="font-size:10px;font-weight:800;color:var(--t3);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px">🗺 Rạch Giá · Kiên Giang · Phú Quốc</div>
-      <div id="bi-region-row" style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:14px"></div>
+      <div style="font-size:13px;font-weight:800;color:var(--t3);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px">🗺 Rạch Giá · Kiên Giang · Phú Quốc</div>
+      <div id="bi-region-row" style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:14px"></div>
 
       <!-- VISIT FREQUENCY -->
-      <div style="font-size:10px;font-weight:800;color:var(--t3);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px">🗓 Tần suất thăm shop</div>
+      <div style="font-size:13px;font-weight:800;color:var(--t3);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px">🗓 Tần suất thăm shop</div>
       <div id="bi-visit-freq" style="background:var(--s1);border:1px solid var(--b1);border-radius:var(--r);overflow:hidden;margin-bottom:14px"></div>
 
       <!-- CHAIN BREAKDOWN -->
-      <div style="font-size:10px;font-weight:800;color:var(--t3);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px">🏪 Theo chuỗi</div>
-      <div style="background:var(--s1);border:1px solid var(--b1);border-radius:var(--r);padding:14px;margin-bottom:14px">
+      <div style="font-size:13px;font-weight:800;color:var(--t3);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px">🏪 Theo chuỗi</div>
+      <div style="background:var(--s1);border:1px solid var(--b1);border-radius:var(--r);padding:18px;margin-bottom:14px">
         <div id="bi-chain-bars"></div>
       </div>
 
       <!-- ALERTS -->
-      <div style="font-size:10px;font-weight:800;color:var(--t3);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px">⚡ Cảnh báo cần xử lý</div>
+      <div style="font-size:13px;font-weight:800;color:var(--t3);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px">⚡ Cảnh báo cần xử lý</div>
       <div id="bi-alerts" style="margin-bottom:14px"></div>
 
     </div>
@@ -462,15 +462,15 @@ input,select,textarea{font-family:var(--f)}
 
       <!-- Shop selector -->
       <div style="margin-bottom:12px">
-        <select id="bi-shop-sel" onchange="renderShopBI(parseInt(this.value))" style="width:100%;padding:11px 13px;background:var(--s2);border:1px solid var(--b2);border-radius:12px;color:var(--t1);font-size:13px;font-weight:700;font-family:var(--f);outline:none;-webkit-appearance:none">
+        <select id="bi-shop-sel" onchange="renderShopBI(parseInt(this.value))" style="width:100%;padding:14px 13px;background:var(--s2);border:1px solid var(--b2);border-radius:16px;color:var(--t1);font-size:17px;font-weight:700;font-family:var(--f);outline:none;-webkit-appearance:none">
           <option value="">— Chọn shop để xem chi tiết —</option>
         </select>
       </div>
 
       <div id="bi-shop-content">
-        <div style="text-align:center;padding:40px 0;color:var(--t3)">
-          <div style="font-size:32px;margin-bottom:10px">🏪</div>
-          <div style="font-size:13px;font-weight:600;color:var(--t2)">Chọn shop để xem Power BI</div>
+        <div style="text-align:center;padding:52px 0;color:var(--t3)">
+          <div style="font-size:42px;margin-bottom:10px">🏪</div>
+          <div style="font-size:17px;font-weight:600;color:var(--t2)">Chọn shop để xem Power BI</div>
         </div>
       </div>
     </div>
@@ -489,7 +489,7 @@ input,select,textarea{font-family:var(--f)}
       <button class="back-btn" onclick="goBack()">‹</button>
       <div style="flex:1;min-width:0">
         <div class="dh-title" id="dhTitle">—</div>
-        <div style="font-size:10px;color:var(--t3);margin-top:2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" id="dhMeta">—</div>
+        <div style="font-size:13px;color:var(--t3);margin-top:2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" id="dhMeta">—</div>
       </div>
       <div class="dh-chain" id="dhChain"></div>
     </div>
@@ -502,11 +502,11 @@ input,select,textarea{font-family:var(--f)}
       <div class="sl" style="margin-top:2px;margin-bottom:12px">Data Hub</div>
 
       <!-- Sub-tabs — rendered statically, content rendered by JS -->
-      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-radius:12px;overflow:hidden;border:1px solid var(--b1);margin-bottom:14px">
-        <button id="dt-tab-lich"   onclick="switchDataTab('lich')"   style="padding:9px 4px;font-size:10px;font-weight:700;border:none;cursor:pointer;font-family:var(--f);background:var(--blue);color:white;border-right:1px solid var(--b1)">&#x1F4C5; Lich</button>
-        <button id="dt-tab-target" onclick="switchDataTab('target')" style="padding:9px 4px;font-size:10px;font-weight:700;border:none;cursor:pointer;font-family:var(--f);background:var(--s1);color:var(--t2);border-right:1px solid var(--b1)">&#x1F3AF; Target</button>
-        <button id="dt-tab-sales"  onclick="switchDataTab('sales')"  style="padding:9px 4px;font-size:10px;font-weight:700;border:none;cursor:pointer;font-family:var(--f);background:var(--s1);color:var(--t2);border-right:1px solid var(--b1)">&#x1F4CA; Sales</button>
-        <button id="dt-tab-team"   onclick="switchDataTab('team')"   style="padding:9px 4px;font-size:10px;font-weight:700;border:none;cursor:pointer;font-family:var(--f);background:var(--s1);color:var(--t2)">&#x1F465; Team</button>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-radius:16px;overflow:hidden;border:1px solid var(--b1);margin-bottom:14px">
+        <button id="dt-tab-lich"   onclick="switchDataTab('lich')"   style="padding:12px 4px;font-size:13px;font-weight:700;border:none;cursor:pointer;font-family:var(--f);background:var(--blue);color:white;border-right:1px solid var(--b1)">&#x1F4C5; Lich</button>
+        <button id="dt-tab-target" onclick="switchDataTab('target')" style="padding:12px 4px;font-size:13px;font-weight:700;border:none;cursor:pointer;font-family:var(--f);background:var(--s1);color:var(--t2);border-right:1px solid var(--b1)">&#x1F3AF; Target</button>
+        <button id="dt-tab-sales"  onclick="switchDataTab('sales')"  style="padding:12px 4px;font-size:13px;font-weight:700;border:none;cursor:pointer;font-family:var(--f);background:var(--s1);color:var(--t2);border-right:1px solid var(--b1)">&#x1F4CA; Sales</button>
+        <button id="dt-tab-team"   onclick="switchDataTab('team')"   style="padding:12px 4px;font-size:13px;font-weight:700;border:none;cursor:pointer;font-family:var(--f);background:var(--s1);color:var(--t2)">&#x1F465; Team</button>
       </div>
 
       <!-- Content areas — all filled by JS switchDataTab() -->
@@ -523,7 +523,7 @@ input,select,textarea{font-family:var(--f)}
       <button class="back-btn" onclick="goBack()">‹</button>
       <div>
         <div class="dh-title" id="staffTitle">Nhân sự</div>
-        <div style="font-size:10px;color:var(--t3);margin-top:2px" id="staffMeta">—</div>
+        <div style="font-size:13px;color:var(--t3);margin-top:2px" id="staffMeta">—</div>
       </div>
     </div>
     <div class="page-inner" style="padding-top:12px" id="staffContent"></div>
@@ -882,7 +882,7 @@ function chainLogo(chain, size=40){
   const w = Math.round(size*1.4);   // wider rectangle
   const h = Math.round(size*0.7);   // shorter height
   if(!d) return `<div style="width:${w}px;height:${h}px;border-radius:${r}px;background:rgba(255,255,255,.08);flex-shrink:0"></div>`;
-  return `<div style="width:${w}px;height:${h}px;border-radius:${r}px;background:${d.bg};flex-shrink:0;padding:2px 5px;display:flex;align-items:center;justify-content:center;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,.3)"><img src="${d.uri}" style="max-width:100%;max-height:100%;object-fit:contain;display:block"/></div>`;
+  return `<div style="width:${w}px;height:${h}px;border-radius:${r}px;background:${d.bg};flex-shrink:0;padding:3px 5px;display:flex;align-items:center;justify-content:center;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,.3)"><img src="${d.uri}" style="max-width:100%;max-height:100%;object-fit:contain;display:block"/></div>`;
 }
 
 const SLOT_NAMES={S:'Sáng',C:'Chiều',T:'Tối'};
@@ -1254,7 +1254,7 @@ function buildTodaySchedule(){
 function renderSchedulePreview(){
   const el=document.getElementById('schedulePreview');if(!el)return;
   if(!scheduleData.length){
-    el.innerHTML=`<div style="text-align:center;padding:28px 0;color:var(--t3)"><div style="font-size:28px;margin-bottom:8px">📂</div><div style="font-size:13px;font-weight:600;color:var(--t2)">Chưa có lịch trình</div><div style="font-size:11px;margin-top:4px">Tải file mẫu → điền → upload lên</div></div>`;
+    el.innerHTML=`<div style="text-align:center;padding:36px 0;color:var(--t3)"><div style="font-size:36px;margin-bottom:8px">📂</div><div style="font-size:17px;font-weight:600;color:var(--t2)">Chưa có lịch trình</div><div style="font-size:14px;margin-top:4px">Tải file mẫu → điền → upload lên</div></div>`;
     return;
   }
   const byMonth={};
@@ -1266,9 +1266,9 @@ function renderSchedulePreview(){
     const workDays=uniqueDays.filter(d=>rows.some(r=>r.date===d&&r.slot!=='OFF')).length;
     const offDays=uniqueDays.filter(d=>rows.some(r=>r.date===d&&r.slot==='OFF')).length;
     html+=`<div style="background:var(--s1);border:1px solid var(--b1);border-radius:var(--r);overflow:hidden;margin-bottom:10px">
-      <div style="background:var(--s2);padding:10px 14px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--b1)">
-        <div style="font-size:12px;font-weight:800">📅 Tháng ${parseInt(m)}/${yr}</div>
-        <div style="font-size:10px;font-family:var(--m);color:var(--blue)">${workDays} ngày làm · ${offDays} ngày nghỉ</div>
+      <div style="background:var(--s2);padding:13px 14px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--b1)">
+        <div style="font-size:16px;font-weight:800">📅 Tháng ${parseInt(m)}/${yr}</div>
+        <div style="font-size:13px;font-family:var(--m);color:var(--blue)">${workDays} ngày làm · ${offDays} ngày nghỉ</div>
       </div>`;
     uniqueDays.forEach(date=>{
       const dayRows=rows.filter(r=>r.date===date);
@@ -1276,17 +1276,17 @@ function renderSchedulePreview(){
       const isToday=date===today();
       const isOff=dayRows.some(r=>r.slot==='OFF');
       const workSlots=dayRows.filter(r=>r.slot!=='OFF');
-      html+=`<div style="padding:9px 14px;border-bottom:1px solid var(--b1);${isToday?'background:var(--bd)':''}${isOff?'opacity:.5':''}">
-        <div style="font-size:10px;font-weight:700;font-family:var(--m);color:${isToday?'var(--blue)':'var(--t3)'};margin-bottom:${workSlots.length?5:0}px">
+      html+=`<div style="padding:12px 14px;border-bottom:1px solid var(--b1);${isToday?'background:var(--bd)':''}${isOff?'opacity:.5':''}">
+        <div style="font-size:13px;font-weight:700;font-family:var(--m);color:${isToday?'var(--blue)':'var(--t3)'};margin-bottom:${workSlots.length?5:0}px">
           ${isToday?'▶ ':''}${dd}/${dm}/${dy}${isToday?' · Hôm nay':''}${isOff?' 🏖 DAY OFF':''}
         </div>
-        <div style="display:flex;gap:6px;flex-wrap:wrap">
+        <div style="display:flex;gap:8px;flex-wrap:wrap">
           ${workSlots.map(r=>{
             const slotC={S:'var(--orange)',C:'var(--blue)',T:'var(--purple)'}[r.slot]||'var(--t3)';
             const slotN={S:'Sáng',C:'Chiều',T:'Tối'}[r.slot]||r.slot;
-            return`<div style="display:flex;align-items:center;gap:5px;background:var(--s2);border:1px solid var(--b1);border-radius:8px;padding:4px 9px">
-              <span style="font-size:9px;font-weight:800;color:${slotC}">${slotN}</span>
-              <span style="font-size:11px;font-weight:700">${r.shopSh}</span>
+            return`<div style="display:flex;align-items:center;gap:6px;background:var(--s2);border:1px solid var(--b1);border-radius:10px;padding:5px 9px">
+              <span style="font-size:12px;font-weight:800;color:${slotC}">${slotN}</span>
+              <span style="font-size:14px;font-weight:700">${r.shopSh}</span>
               ${r.shopId?`<span style="width:5px;height:5px;border-radius:50%;background:var(--green);display:inline-block"></span>`:''}
             </div>`;
           }).join('')}
@@ -1469,14 +1469,14 @@ function renderSchedule(){
   if(isOffDay){
     const _e_schedBody=document.getElementById('schedBody');if(_e_schedBody)_e_schedBody.innerHTML=`
       <div style="display:grid;grid-template-columns:48px 1fr 56px 1fr 30px;border-bottom:1px solid var(--b1)">
-        <div style="padding:12px 8px;display:flex;align-items:center">
-          <span style="font-size:10px;font-weight:800;padding:3px 7px;border-radius:5px;background:rgba(255,255,255,.08);color:rgba(255,255,255,.4)">—</span>
+        <div style="padding:16px 8px;display:flex;align-items:center">
+          <span style="font-size:13px;font-weight:800;padding:4px 7px;border-radius:6px;background:rgba(255,255,255,.08);color:rgba(255,255,255,.4)">—</span>
         </div>
-        <div style="padding:12px 6px;display:flex;align-items:center;gap:6px" colspan="4">
-          <span style="font-size:20px">🏖</span>
+        <div style="padding:16px 6px;display:flex;align-items:center;gap:8px" colspan="4">
+          <span style="font-size:26px">🏖</span>
           <div>
-            <div style="font-size:13px;font-weight:800;color:rgba(255,255,255,.6)">${offInfo?.type||'DAY OFF'}</div>
-            <div style="font-size:10px;color:rgba(255,255,255,.3);margin-top:1px">Hôm nay không đi làm</div>
+            <div style="font-size:17px;font-weight:800;color:rgba(255,255,255,.6)">${offInfo?.type||'DAY OFF'}</div>
+            <div style="font-size:13px;color:rgba(255,255,255,.3);margin-top:1px">Hôm nay không đi làm</div>
           </div>
         </div>
         <div></div><div></div><div></div>
@@ -1503,7 +1503,7 @@ function renderSchedule(){
 
     return`<div class="sc-row${isActive?' row-active':''}">
       <div class="sc-cell"><span class="slot-lbl ${SLOT_CLS[slot]}">${SLOT_NAMES[slot]}</span></div>
-      <div class="sc-cell" style="cursor:pointer;gap:6px" onclick="${shop?`goDetail(${shop.id})`:''}">
+      <div class="sc-cell" style="cursor:pointer;gap:8px" onclick="${shop?`goDetail(${shop.id})`:''}">
         ${shop?chainLogo(shop.chain,22):''}
         <span class="sc-shopname" style="${isActive?'color:var(--blue);font-weight:800':''}">${shop?shop.sh:'Trống'}</span>
       </div>
@@ -1514,7 +1514,7 @@ function renderSchedule(){
               ${isCompleted?'disabled style="opacity:.55;cursor:default"':''}>
               ${visitText}
             </button>`
-          :'<span style="font-size:10px;color:var(--t3)">—</span>'}
+          :'<span style="font-size:13px;color:var(--t3)">—</span>'}
       </div>
       <div class="sc-cell">
         <div class="crit-bar">
@@ -1625,11 +1625,11 @@ function renderShopList(){
       const clr=chainColors[chain];
       html+=`<div style="margin-bottom:4px">
         <!-- Chain header -->
-        <div style="display:flex;align-items:center;gap:8px;padding:7px 12px;margin-bottom:4px">
+        <div style="display:flex;align-items:center;gap:10px;padding:9px 12px;margin-bottom:4px">
           ${chainLogo(chain,22)}
-          <div style="font-size:11px;font-weight:800;color:${clr};flex:1">${chain}</div>
-          <div style="font-size:10px;font-family:var(--m);font-weight:700;color:var(--t3)">${group.length} shop</div>
-          ${chainVisited?`<div style="font-size:9px;font-weight:700;padding:2px 7px;border-radius:5px;background:var(--gd);color:var(--green)">${chainVisited}✓</div>`:''}
+          <div style="font-size:14px;font-weight:800;color:${clr};flex:1">${chain}</div>
+          <div style="font-size:13px;font-family:var(--m);font-weight:700;color:var(--t3)">${group.length} shop</div>
+          ${chainVisited?`<div style="font-size:12px;font-weight:700;padding:3px 7px;border-radius:6px;background:var(--gd);color:var(--green)">${chainVisited}✓</div>`:''}
         </div>
         ${group.map((s,i)=>shopRow(s,i,false)).join('')}
       </div>`;
@@ -1638,7 +1638,7 @@ function renderShopList(){
     // Single chain filtered
     const filtered=allRanked.filter(s=>s.chain===activeChainFilter);
     html=filtered.map((s,i)=>shopRow(s,i,true)).join('');
-    if(!filtered.length) html=`<div style="text-align:center;padding:24px;color:var(--t3);font-size:12px">Không có shop nào</div>`;
+    if(!filtered.length) html=`<div style="text-align:center;padding:31px;color:var(--t3);font-size:16px">Không có shop nào</div>`;
   }
 
   const _e_shopList=document.getElementById('shopList');if(_e_shopList)_e_shopList.innerHTML=html;
@@ -1699,7 +1699,7 @@ function renderDetail(shopId){
          ['Thái độ NV',last.staff],['CTKM Apple',last.promo],
          ['KH Insight',last.mkt],['Score',last.score?last.score+'/5':'']
         ].filter(r=>r[1]).map(([k,v])=>`<div class="d-row"><span class="d-key">${k}</span><span class="d-val">${v}</span></div>`).join('')}
-      ${last.action?`<div style="background:var(--od);border:1px solid rgba(255,159,10,.25);border-radius:9px;padding:10px 12px;margin-top:8px;font-size:12px;color:var(--orange)">⚡ ${last.action}</div>`:''}
+      ${last.action?`<div style="background:var(--od);border:1px solid rgba(255,159,10,.25);border-radius:12px;padding:13px 12px;margin-top:8px;font-size:16px;color:var(--orange)">⚡ ${last.action}</div>`:''}
     </div>`;
   }
 
@@ -1782,7 +1782,7 @@ function renderAreaBI(){
   const allNV=Object.values(STAFF_DATA.nv).flat();
   const champs=allNV.filter(n=>n.aep==='Champion'||n.aep==='Champion+').length;
   const kpiEl=document.getElementById('bi-kpi-row');
-  if(kpiEl)kpiEl.innerHTML=[{i:'🏪',v:`${shopsVisited}/13`,l:'Có data',c:'var(--blue)'},{i:'⚡',v:alertCount,l:'Cần xử lý',c:alertCount>0?'var(--red)':'var(--green)'},{i:'👥',v:allNV.length,l:'Nhân sự',c:'var(--orange)'},{i:'⭐',v:champs,l:'Champion',c:'var(--purple)'}].map(k=>`<div style="background:var(--s1);border:1px solid var(--b1);border-radius:var(--r);padding:13px;position:relative;overflow:hidden"><div style="position:absolute;top:0;left:0;right:0;height:2px;background:${k.c}"></div><div style="font-size:18px;margin-bottom:5px">${k.i}</div><div style="font-size:22px;font-weight:900;font-family:var(--m);color:${k.c};letter-spacing:-1px;line-height:1">${k.v}</div><div style="font-size:10px;font-weight:700;color:var(--t3);margin-top:4px">${k.l}</div></div>`).join('');
+  if(kpiEl)kpiEl.innerHTML=[{i:'🏪',v:`${shopsVisited}/13`,l:'Có data',c:'var(--blue)'},{i:'⚡',v:alertCount,l:'Cần xử lý',c:alertCount>0?'var(--red)':'var(--green)'},{i:'👥',v:allNV.length,l:'Nhân sự',c:'var(--orange)'},{i:'⭐',v:champs,l:'Champion',c:'var(--purple)'}].map(k=>`<div style="background:var(--s1);border:1px solid var(--b1);border-radius:var(--r);padding:17px;position:relative;overflow:hidden"><div style="position:absolute;top:0;left:0;right:0;height:2px;background:${k.c}"></div><div style="font-size:23px;margin-bottom:5px">${k.i}</div><div style="font-size:29px;font-weight:900;font-family:var(--m);color:${k.c};letter-spacing:-1px;line-height:1">${k.v}</div><div style="font-size:13px;font-weight:700;color:var(--t3);margin-top:4px">${k.l}</div></div>`).join('');
   const ssEl=document.getElementById('bi-shop-status');
   if(ssEl)ssEl.innerHTML=SHOPS.map(s=>{
     const lv=lastVisit(s.id);const st=shopStatus(s);const stO=ST[st];
@@ -1792,18 +1792,18 @@ function renderAreaBI(){
     const pct=tgt.iphone>0?Math.round(act.iphone/tgt.iphone*100):null;
     const issues=[];
     if(lv){if(lv.stock?.includes('Hết'))issues.push({c:'var(--red)',t:'Hết hàng'});if(lv.stock?.includes('Gần')||lv.stock?.includes('Thấp'))issues.push({c:'var(--orange)',t:'Tồn thấp'});if(lv.staff==='Tiêu cực')issues.push({c:'var(--red)',t:'NV tiêu cực'});if(days>14)issues.push({c:'var(--orange)',t:`${days}d chưa thăm`});}
-    return`<div style="background:${stO.bg};border:1px solid ${stO.bd};border-radius:13px;padding:12px 13px;margin-bottom:8px;cursor:pointer" onclick="goDetail(${s.id})"><div style="display:flex;align-items:center;gap:9px;margin-bottom:${issues.length?7:0}px">${chainLogo(s.chain,24)}<div style="flex:1;min-width:0"><div style="font-size:12px;font-weight:800;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${s.name}</div><div style="font-size:10px;color:var(--t3);margin-top:2px;font-family:var(--m)">${s.reg} · ${dLabel}</div></div><div style="text-align:right;flex-shrink:0"><div style="font-size:10px;font-weight:800;padding:3px 8px;border-radius:6px;background:${stO.bd};color:${stO.c}">${stO.label}</div>${pct!==null?`<div style="font-size:10px;font-family:var(--m);font-weight:700;margin-top:3px;color:${pct>=100?'var(--green)':pct>=60?'var(--orange)':'var(--red)'}">${pct}% target</div>`:''}</div></div>${issues.length?`<div style="display:flex;gap:5px;flex-wrap:wrap">${issues.map(is=>`<span style="font-size:9px;font-weight:700;padding:2px 7px;border-radius:5px;background:${is.c}20;color:${is.c}">${is.t}</span>`).join('')}</div>`:''}</div>`;
+    return`<div style="background:${stO.bg};border:1px solid ${stO.bd};border-radius:17px;padding:16px 13px;margin-bottom:8px;cursor:pointer" onclick="goDetail(${s.id})"><div style="display:flex;align-items:center;gap:12px;margin-bottom:${issues.length?7:0}px">${chainLogo(s.chain,24)}<div style="flex:1;min-width:0"><div style="font-size:16px;font-weight:800;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${s.name}</div><div style="font-size:13px;color:var(--t3);margin-top:2px;font-family:var(--m)">${s.reg} · ${dLabel}</div></div><div style="text-align:right;flex-shrink:0"><div style="font-size:13px;font-weight:800;padding:4px 8px;border-radius:8px;background:${stO.bd};color:${stO.c}">${stO.label}</div>${pct!==null?`<div style="font-size:13px;font-family:var(--m);font-weight:700;margin-top:3px;color:${pct>=100?'var(--green)':pct>=60?'var(--orange)':'var(--red)'}">${pct}% target</div>`:''}</div></div>${issues.length?`<div style="display:flex;gap:6px;flex-wrap:wrap">${issues.map(is=>`<span style="font-size:12px;font-weight:700;padding:3px 7px;border-radius:6px;background:${is.c}20;color:${is.c}">${is.t}</span>`).join('')}</div>`:''}</div>`;
   }).join('');
   const rrEl=document.getElementById('bi-region-row');
   const regs=[['Rach Gia','Rạch Giá','var(--blue)'],['Kien Giang','Kiên Giang','var(--orange)'],['Phu Quoc','Phú Quốc','var(--green)']];
   if(rrEl)rrEl.innerHTML=regs.map(([r,rl,rc])=>{
     const shs=SHOPS.filter(s=>s.reg===r);const ok=shs.filter(s=>shopStatus(s)==='green').length;const warn=shs.filter(s=>shopStatus(s)==='orange').length;const bad=shs.filter(s=>shopStatus(s)==='red').length;const nd=shs.filter(s=>shopStatus(s)==='gray').length;
-    return`<div style="background:var(--s1);border:1px solid var(--b1);border-radius:var(--r);padding:12px;text-align:center"><div style="font-size:11px;font-weight:800;color:${rc};margin-bottom:6px">${rl}</div><div style="font-size:18px;font-weight:900;font-family:var(--m)">${shs.length}</div><div style="font-size:9px;color:var(--t3);margin-bottom:7px">shop</div><div style="display:flex;gap:3px;justify-content:center;flex-wrap:wrap">${ok?`<span style="font-size:9px;font-weight:700;padding:2px 5px;border-radius:4px;background:rgba(48,209,88,.15);color:var(--green)">${ok}✅</span>`:''}${warn?`<span style="font-size:9px;font-weight:700;padding:2px 5px;border-radius:4px;background:rgba(255,159,10,.15);color:var(--orange)">${warn}⚠️</span>`:''}${bad?`<span style="font-size:9px;font-weight:700;padding:2px 5px;border-radius:4px;background:rgba(255,69,58,.15);color:var(--red)">${bad}🚨</span>`:''}${nd?`<span style="font-size:9px;font-weight:700;padding:2px 5px;border-radius:4px;background:rgba(255,255,255,.06);color:var(--t3)">${nd}⬜</span>`:''}</div></div>`;
+    return`<div style="background:var(--s1);border:1px solid var(--b1);border-radius:var(--r);padding:16px;text-align:center"><div style="font-size:14px;font-weight:800;color:${rc};margin-bottom:6px">${rl}</div><div style="font-size:23px;font-weight:900;font-family:var(--m)">${shs.length}</div><div style="font-size:12px;color:var(--t3);margin-bottom:7px">shop</div><div style="display:flex;gap:4px;justify-content:center;flex-wrap:wrap">${ok?`<span style="font-size:12px;font-weight:700;padding:3px 5px;border-radius:5px;background:rgba(48,209,88,.15);color:var(--green)">${ok}✅</span>`:''}${warn?`<span style="font-size:12px;font-weight:700;padding:3px 5px;border-radius:5px;background:rgba(255,159,10,.15);color:var(--orange)">${warn}⚠️</span>`:''}${bad?`<span style="font-size:12px;font-weight:700;padding:3px 5px;border-radius:5px;background:rgba(255,69,58,.15);color:var(--red)">${bad}🚨</span>`:''}${nd?`<span style="font-size:12px;font-weight:700;padding:3px 5px;border-radius:5px;background:rgba(255,255,255,.06);color:var(--t3)">${nd}⬜</span>`:''}</div></div>`;
   }).join('');
   const vfEl=document.getElementById('bi-visit-freq');
   if(vfEl){
     const freqRows=SHOPS.map(s=>{const lv=lastVisit(s.id);const days=lv?daysSince(lv.date):null;const cnt=visits.filter(v=>v.shop_id===s.id).length;const uc=days===null?'var(--t3)':days>14?'var(--red)':days>7?'var(--orange)':'var(--green)';return{s,days,cnt,uc};}).sort((a,b)=>(b.days===null?-1:b.days)-(a.days===null?-1:a.days));
-    vfEl.innerHTML=`<div style="padding:8px 12px;background:var(--s2);border-bottom:1px solid var(--b1);display:grid;grid-template-columns:1fr 56px 48px;gap:8px"><div style="font-size:9px;font-weight:800;color:var(--t3);text-transform:uppercase">Shop</div><div style="font-size:9px;font-weight:800;color:var(--t3);text-transform:uppercase;text-align:right">Lần</div><div style="font-size:9px;font-weight:800;color:var(--t3);text-transform:uppercase;text-align:right">Gần nhất</div></div>${freqRows.map(({s,days,cnt,uc})=>`<div style="padding:9px 12px;border-bottom:1px solid var(--b1);display:grid;grid-template-columns:1fr 56px 48px;gap:8px;align-items:center;cursor:pointer" onclick="goDetail(${s.id})"><div style="display:flex;align-items:center;gap:7px">${chainLogo(s.chain,18)}<div><div style="font-size:11px;font-weight:700;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:110px">${s.sh}</div><div style="font-size:9px;color:var(--t3)">${s.reg}</div></div></div><div style="font-size:12px;font-weight:800;font-family:var(--m);color:var(--blue);text-align:right">${cnt}</div><div style="font-size:10px;font-weight:700;font-family:var(--m);color:${uc};text-align:right">${days===null?'—':days===0?'Hôm nay':days+'d'}</div></div>`).join('')}`;
+    vfEl.innerHTML=`<div style="padding:10px 12px;background:var(--s2);border-bottom:1px solid var(--b1);display:grid;grid-template-columns:1fr 56px 48px;gap:10px"><div style="font-size:12px;font-weight:800;color:var(--t3);text-transform:uppercase">Shop</div><div style="font-size:12px;font-weight:800;color:var(--t3);text-transform:uppercase;text-align:right">Lần</div><div style="font-size:12px;font-weight:800;color:var(--t3);text-transform:uppercase;text-align:right">Gần nhất</div></div>${freqRows.map(({s,days,cnt,uc})=>`<div style="padding:12px 12px;border-bottom:1px solid var(--b1);display:grid;grid-template-columns:1fr 56px 48px;gap:10px;align-items:center;cursor:pointer" onclick="goDetail(${s.id})"><div style="display:flex;align-items:center;gap:9px">${chainLogo(s.chain,18)}<div><div style="font-size:14px;font-weight:700;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:110px">${s.sh}</div><div style="font-size:12px;color:var(--t3)">${s.reg}</div></div></div><div style="font-size:16px;font-weight:800;font-family:var(--m);color:var(--blue);text-align:right">${cnt}</div><div style="font-size:13px;font-weight:700;font-family:var(--m);color:${uc};text-align:right">${days===null?'—':days===0?'Hôm nay':days+'d'}</div></div>`).join('')}`;
   }
   const chains=['FStudio','FPT','CPS','MWG','Viettel','TopZone'];
   const cCols={'FStudio':'#0a84ff','FPT':'#ff9f0a','CPS':'#30d158','MWG':'#ff453a','Viettel':'#bf5af2','TopZone':'#64d2ff'};
@@ -1814,15 +1814,15 @@ function renderAreaBI(){
     const tgt=sids.reduce((a,id)=>{const sh=SHOPS.find(s=>s.id===id);return a+(getTarget(sh?.appleId).iphone||0);},0);
     const act=sids.reduce((a,id)=>{const sh=SHOPS.find(s=>s.id===id);return a+(getSalesQ1(sh?.appleId).iphone||0);},0);
     const pct=tgt>0?Math.min(100,Math.round(act/tgt*100)):0;const pc=pct>=100?'var(--green)':pct>=60?'var(--orange)':'var(--red)';
-    return`<div style="margin-bottom:11px"><div style="display:flex;align-items:center;gap:8px;margin-bottom:4px"><div style="min-width:60px;font-size:11px;font-weight:700;color:${cCols[c]}">${c}</div><div style="font-size:10px;color:var(--t3);flex:1">${sids.length} shop · ${good}✅</div><div style="font-size:10px;font-weight:700;font-family:var(--m);color:${pc}">${pct}%</div></div><div style="height:6px;background:var(--t4);border-radius:3px;overflow:hidden"><div style="height:100%;width:${pct}%;background:${pc};border-radius:3px;transition:width .6s ease"></div></div></div>`;
+    return`<div style="margin-bottom:11px"><div style="display:flex;align-items:center;gap:10px;margin-bottom:4px"><div style="min-width:78px;font-size:14px;font-weight:700;color:${cCols[c]}">${c}</div><div style="font-size:13px;color:var(--t3);flex:1">${sids.length} shop · ${good}✅</div><div style="font-size:13px;font-weight:700;font-family:var(--m);color:${pc}">${pct}%</div></div><div style="height:6px;background:var(--t4);border-radius:4px;overflow:hidden"><div style="height:100%;width:${pct}%;background:${pc};border-radius:4px;transition:width .6s ease"></div></div></div>`;
   }).join('');
   const alerts=[];
   SHOPS.forEach(s=>{const lv=lastVisit(s.id);const days=daysSince(lv?.date);if(!lv)alerts.push({c:'var(--t3)',i:'⬜',t:'Chưa thăm: '+s.sh,b:'Chưa có data',sid:s.id,p:0});else{if(lv.stock?.includes('Hết'))alerts.push({c:'var(--red)',i:'📦',t:'Hết hàng: '+s.sh,b:lv.date,sid:s.id,p:3});if(lv.stock?.includes('Gần'))alerts.push({c:'var(--orange)',i:'⚠️',t:'Tồn thấp: '+s.sh,b:lv.date,sid:s.id,p:2});if(lv.staff==='Tiêu cực')alerts.push({c:'var(--red)',i:'👥',t:'NV tiêu cực: '+s.sh,b:'Cần coaching',sid:s.id,p:3});if(days>14)alerts.push({c:'var(--orange)',i:'🗓',t:'Lâu chưa thăm: '+s.sh,b:`${days} ngày`,sid:s.id,p:1});}});
   alerts.sort((a,b)=>b.p-a.p);
   const alEl=document.getElementById('bi-alerts');
-  if(alEl)alEl.innerHTML=alerts.length?alerts.map(a=>`<div onclick="goDetail(${a.sid})" style="display:flex;gap:9px;padding:10px 12px;border-radius:12px;background:${a.c}18;border:1px solid ${a.c}28;margin-bottom:7px;cursor:pointer"><div style="font-size:15px;flex-shrink:0">${a.i}</div><div style="flex:1"><div style="font-size:12px;font-weight:700">${a.t}</div><div style="font-size:10px;color:var(--t2);margin-top:2px">${a.b}</div></div><div style="font-size:14px;color:var(--t3)">›</div></div>`).join(''):`<div style="text-align:center;padding:14px;background:var(--gd);border:1px solid rgba(48,209,88,.2);border-radius:12px;font-size:12px;font-weight:700;color:var(--green)">✅ Không có cảnh báo</div>`;
+  if(alEl)alEl.innerHTML=alerts.length?alerts.map(a=>`<div onclick="goDetail(${a.sid})" style="display:flex;gap:12px;padding:13px 12px;border-radius:16px;background:${a.c}18;border:1px solid ${a.c}28;margin-bottom:7px;cursor:pointer"><div style="font-size:20px;flex-shrink:0">${a.i}</div><div style="flex:1"><div style="font-size:16px;font-weight:700">${a.t}</div><div style="font-size:13px;color:var(--t2);margin-top:2px">${a.b}</div></div><div style="font-size:18px;color:var(--t3)">›</div></div>`).join(''):`<div style="text-align:center;padding:18px;background:var(--gd);border:1px solid rgba(48,209,88,.2);border-radius:16px;font-size:16px;font-weight:700;color:var(--green)">✅ Không có cảnh báo</div>`;
   const kpiEl2=document.getElementById('bi-staff-kpi');
-  if(kpiEl2)kpiEl2.innerHTML=`<span style="font-family:var(--m)">${allNV.length}</span> nhân sự &nbsp;·&nbsp; <span style="color:var(--orange);font-family:var(--m)">${champs}</span> Champion &nbsp;·&nbsp; <span style="color:var(--t3);font-size:11px">${Object.values(STAFF_DATA.sm).flat().length} SM</span>`;
+  if(kpiEl2)kpiEl2.innerHTML=`<span style="font-family:var(--m)">${allNV.length}</span> nhân sự &nbsp;·&nbsp; <span style="color:var(--orange);font-family:var(--m)">${champs}</span> Champion &nbsp;·&nbsp; <span style="color:var(--t3);font-size:14px">${Object.values(STAFF_DATA.sm).flat().length} SM</span>`;
 }
 
 let staffListOpen=false;
@@ -1838,32 +1838,32 @@ function toggleStaffList(){
 let shopBICharts={};
 function renderShopBI(shopId, containerId){
   const _cid = containerId || 'bi-shop-content';
-  if(!shopId){const _ce=document.getElementById(_cid);if(_ce)_ce.innerHTML=`<div style="text-align:center;padding:40px 0;color:var(--t3)"><div style="font-size:32px;margin-bottom:10px">🏪</div><div style="font-size:13px;font-weight:600;color:var(--t2)">Chọn shop để xem Power BI</div></div>`;return;}
+  if(!shopId){const _ce=document.getElementById(_cid);if(_ce)_ce.innerHTML=`<div style="text-align:center;padding:52px 0;color:var(--t3)"><div style="font-size:42px;margin-bottom:10px">🏪</div><div style="font-size:17px;font-weight:600;color:var(--t2)">Chọn shop để xem Power BI</div></div>`;return;}
   const shop=SHOPS.find(s=>s.id===shopId);if(!shop)return;
   const sv=visits.filter(v=>v.shop_id===shopId);const last=sv[sv.length-1];const clr=shop.c;
   const tgt=getEffectiveTarget(shop.appleId);const act=getSalesQ1(shop.appleId);const q=curQLabel();
-  const pB=(l,a,t)=>{const p=t>0?Math.min(100,Math.round(a/t*100)):0;const c=p>=100?'var(--green)':p>=60?'var(--orange)':'var(--red)';return`<div style="margin-bottom:9px"><div style="display:flex;justify-content:space-between;margin-bottom:4px"><span style="font-size:11px;font-weight:700">${l}</span><span style="font-size:10px;font-family:var(--m);color:${c}">${a}/${t} · ${p}%</span></div><div style="height:7px;background:var(--t4);border-radius:4px;overflow:hidden"><div style="height:100%;width:${p}%;background:${c};border-radius:4px;transition:width .6s ease"></div></div></div>`;};
+  const pB=(l,a,t)=>{const p=t>0?Math.min(100,Math.round(a/t*100)):0;const c=p>=100?'var(--green)':p>=60?'var(--orange)':'var(--red)';return`<div style="margin-bottom:9px"><div style="display:flex;justify-content:space-between;margin-bottom:4px"><span style="font-size:14px;font-weight:700">${l}</span><span style="font-size:13px;font-family:var(--m);color:${c}">${a}/${t} · ${p}%</span></div><div style="height:7px;background:var(--t4);border-radius:5px;overflow:hidden"><div style="height:100%;width:${p}%;background:${c};border-radius:5px;transition:width .6s ease"></div></div></div>`;};
   const html=`
-  <div style="background:${clr}18;border:1px solid ${clr}35;border-radius:var(--r);padding:14px 16px;margin-bottom:12px">
+  <div style="background:${clr}18;border:1px solid ${clr}35;border-radius:var(--r);padding:18px 16px;margin-bottom:12px">
     <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:8px">
-      <div style="display:flex;align-items:center;gap:10px">${chainLogo(shop.chain,32)}
-        <div><div style="font-size:13px;font-weight:900;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:200px">${shop.name}</div>
-        <div style="font-size:10px;color:var(--t2);margin-top:3px;font-family:var(--m)">${shop.chain} · ${shop.reg}</div></div>
+      <div style="display:flex;align-items:center;gap:13px">${chainLogo(shop.chain,32)}
+        <div><div style="font-size:17px;font-weight:900;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:200px">${shop.name}</div>
+        <div style="font-size:13px;color:var(--t2);margin-top:3px;font-family:var(--m)">${shop.chain} · ${shop.reg}</div></div>
       </div>
-      <div style="text-align:right;flex-shrink:0"><div style="font-size:10px;color:var(--t3)">Apple ID</div><div style="font-size:12px;font-weight:800;font-family:var(--m);color:${clr}">${shop.appleId}</div></div>
+      <div style="text-align:right;flex-shrink:0"><div style="font-size:13px;color:var(--t3)">Apple ID</div><div style="font-size:16px;font-weight:800;font-family:var(--m);color:${clr}">${shop.appleId}</div></div>
     </div>
-    <div style="display:flex;gap:6px;flex-wrap:wrap">
-      <span style="font-size:10px;font-weight:700;padding:3px 9px;border-radius:6px;background:${clr}25;color:${clr}">${shop.chain}</span>
-      <span style="font-size:10px;font-weight:700;padding:3px 9px;border-radius:6px;background:var(--s2);color:var(--t2)">${sv.length} lần thăm</span>
-      <span style="font-size:10px;font-weight:700;padding:3px 9px;border-radius:6px;background:var(--bd);color:var(--blue)">${q}</span>
+    <div style="display:flex;gap:8px;flex-wrap:wrap">
+      <span style="font-size:13px;font-weight:700;padding:4px 9px;border-radius:8px;background:${clr}25;color:${clr}">${shop.chain}</span>
+      <span style="font-size:13px;font-weight:700;padding:4px 9px;border-radius:8px;background:var(--s2);color:var(--t2)">${sv.length} lần thăm</span>
+      <span style="font-size:13px;font-weight:700;padding:4px 9px;border-radius:8px;background:var(--bd);color:var(--blue)">${q}</span>
     </div>
   </div>
-  <div style="background:var(--s1);border:1px solid var(--b1);border-radius:var(--r);padding:13px;margin-bottom:12px">
-    <div style="font-size:10px;font-weight:800;color:var(--t3);text-transform:uppercase;letter-spacing:.7px;margin-bottom:12px">🎯 Target ${q}</div>
+  <div style="background:var(--s1);border:1px solid var(--b1);border-radius:var(--r);padding:17px;margin-bottom:12px">
+    <div style="font-size:13px;font-weight:800;color:var(--t3);text-transform:uppercase;letter-spacing:.7px;margin-bottom:12px">🎯 Target ${q}</div>
     ${pB('📱 iPhone',act.iphone,tgt.iphone)}${pB('📟 iPad',act.ipad,tgt.ipad)}${pB('💻 Mac',act.mac,tgt.mac)}${pB('⌚ AW',act.aw,tgt.aw)}${pB('🎧 AirPods',act.ap,tgt.ap)}
   </div>
-  ${last||Object.keys(getShopBI(shopId).stock||{}).length?`<div style="background:var(--s1);border:1px solid var(--b1);border-radius:var(--r);padding:13px;margin-bottom:12px">
-    <div style="font-size:10px;font-weight:800;color:var(--t3);text-transform:uppercase;letter-spacing:.7px;margin-bottom:10px">📋 Tình trạng shop${last?` · ${last.date}`:''}</div>
+  ${last||Object.keys(getShopBI(shopId).stock||{}).length?`<div style="background:var(--s1);border:1px solid var(--b1);border-radius:var(--r);padding:17px;margin-bottom:12px">
+    <div style="font-size:13px;font-weight:800;color:var(--t3);text-transform:uppercase;letter-spacing:.7px;margin-bottom:10px">📋 Tình trạng shop${last?` · ${last.date}`:''}</div>
     ${(()=>{
       const bi=getShopBI(shopId);
       const rows=[];
@@ -1873,74 +1873,74 @@ function renderShopBI(shopId, containerId){
       const stock=last?.stock||(bi.stock?.iphone); if(stock) rows.push(['📦 Tồn kho',stock]);
       const staff=last?.staff||bi.staff_attitude; if(staff) rows.push(['👥 Thái độ NV',staff]);
       const brand=last?.brand; if(brand) rows.push(['🏷 Brand đẩy',brand]);
-      if(!rows.length) return `<div style="color:var(--t3);font-size:12px;text-align:center;padding:8px">Chưa có dữ liệu — bấm ✏️ Nhập liệu</div>`;
-      return rows.map(([k,v])=>`<div style="display:flex;align-items:center;gap:8px;padding:7px 0;border-bottom:1px solid var(--b1)"><span style="font-size:11px;color:var(--t3);min-width:100px">${k}</span><span style="font-size:12px;font-weight:700">${v}</span></div>`).join('');
+      if(!rows.length) return `<div style="color:var(--t3);font-size:16px;text-align:center;padding:10px">Chưa có dữ liệu — bấm ✏️ Nhập liệu</div>`;
+      return rows.map(([k,v])=>`<div style="display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid var(--b1)"><span style="font-size:14px;color:var(--t3);min-width:130px">${k}</span><span style="font-size:16px;font-weight:700">${v}</span></div>`).join('');
     })()}
-    ${(getShopBI(shopId).note||last?.action)?`<div style="background:var(--od);border-radius:9px;padding:9px 11px;margin-top:8px;font-size:11px;color:var(--orange)">⚡ ${getShopBI(shopId).note||last?.action}</div>`:''}
-  </div>`:`<div style="background:var(--s1);border:1px solid var(--b1);border-radius:var(--r);padding:16px;margin-bottom:12px;text-align:center">
-    <div style="font-size:28px;margin-bottom:8px">📋</div>
-    <div style="font-size:13px;font-weight:700;color:var(--t2)">Chưa có dữ liệu</div>
-    <div style="font-size:11px;color:var(--t3);margin-top:4px">Bấm ✏️ Nhập liệu để thêm thông tin</div>
+    ${(getShopBI(shopId).note||last?.action)?`<div style="background:var(--od);border-radius:12px;padding:12px 11px;margin-top:8px;font-size:14px;color:var(--orange)">⚡ ${getShopBI(shopId).note||last?.action}</div>`:''}
+  </div>`:`<div style="background:var(--s1);border:1px solid var(--b1);border-radius:var(--r);padding:21px;margin-bottom:12px;text-align:center">
+    <div style="font-size:36px;margin-bottom:8px">📋</div>
+    <div style="font-size:17px;font-weight:700;color:var(--t2)">Chưa có dữ liệu</div>
+    <div style="font-size:14px;color:var(--t3);margin-top:4px">Bấm ✏️ Nhập liệu để thêm thông tin</div>
   </div>`}
   <div style="background:var(--s1);border:1px solid var(--b1);border-radius:var(--r);overflow:hidden;margin-bottom:12px">
-    <div style="background:var(--s2);padding:10px 13px;border-bottom:1px solid var(--b1);font-size:10px;font-weight:800;color:var(--t3);text-transform:uppercase;letter-spacing:.7px">👥 Nhân sự</div>
+    <div style="background:var(--s2);padding:13px 13px;border-bottom:1px solid var(--b1);font-size:13px;font-weight:800;color:var(--t3);text-transform:uppercase;letter-spacing:.7px">👥 Nhân sự</div>
     <div id="shopBIStaffList-${shopId}"></div>
   </div>
-  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:10px">
-    <button onclick="exportShopSample(${shopId})" style="padding:12px 8px;border-radius:12px;background:var(--bd);border:1px solid rgba(10,132,255,.3);color:var(--blue);font-size:11px;font-weight:800;cursor:pointer;font-family:var(--f)">📥 File mẫu</button>
-    <button onclick="document.getElementById('shopBIInput-${shopId}').click()" style="padding:12px 8px;border-radius:12px;background:var(--s1);border:1px solid var(--b1);color:var(--t2);font-size:11px;font-weight:800;cursor:pointer;font-family:var(--f)">📤 Upload CSV</button>
-    <button onclick="toggleShopEditForm(${shopId})" style="padding:12px 8px;border-radius:12px;background:var(--gd);border:1px solid rgba(48,209,88,.3);color:var(--green);font-size:11px;font-weight:800;cursor:pointer;font-family:var(--f)">✏️ Nhập tay</button>
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:10px">
+    <button onclick="exportShopSample(${shopId})" style="padding:16px 8px;border-radius:16px;background:var(--bd);border:1px solid rgba(10,132,255,.3);color:var(--blue);font-size:14px;font-weight:800;cursor:pointer;font-family:var(--f)">📥 File mẫu</button>
+    <button onclick="document.getElementById('shopBIInput-${shopId}').click()" style="padding:16px 8px;border-radius:16px;background:var(--s1);border:1px solid var(--b1);color:var(--t2);font-size:14px;font-weight:800;cursor:pointer;font-family:var(--f)">📤 Upload CSV</button>
+    <button onclick="toggleShopEditForm(${shopId})" style="padding:16px 8px;border-radius:16px;background:var(--gd);border:1px solid rgba(48,209,88,.3);color:var(--green);font-size:14px;font-weight:800;cursor:pointer;font-family:var(--f)">✏️ Nhập tay</button>
   </div>
   <input type="file" id="shopBIInput-${shopId}" accept=".csv" style="display:none" onchange="handleShopBIUpload(event,${shopId})">
 
   <!-- EDIT FORM — hidden by default -->
-  <div id="shopEditForm-${shopId}" style="display:none;background:var(--s1);border:1px solid var(--b1);border-radius:var(--r);padding:14px;margin-bottom:12px">
-    <div style="font-size:11px;font-weight:800;color:var(--t1);margin-bottom:12px">✏️ Nhập liệu thủ công</div>
+  <div id="shopEditForm-${shopId}" style="display:none;background:var(--s1);border:1px solid var(--b1);border-radius:var(--r);padding:18px;margin-bottom:12px">
+    <div style="font-size:14px;font-weight:800;color:var(--t1);margin-bottom:12px">✏️ Nhập liệu thủ công</div>
 
-    <div style="font-size:10px;font-weight:700;color:var(--t3);margin-bottom:8px;text-transform:uppercase;letter-spacing:.5px">📦 Tồn kho</div>
+    <div style="font-size:13px;font-weight:700;color:var(--t3);margin-bottom:8px;text-transform:uppercase;letter-spacing:.5px">📦 Tồn kho</div>
     ${['iPhone','iPad','Mac','Apple Watch','AirPods'].map((p,i)=>{
       const key=['iphone','ipad','mac','aw','airpods'][i];
       const cur=getShopBI(shopId).stock?.[key]||'';
-      return`<div style="display:flex;align-items:center;gap:8px;margin-bottom:7px">
-        <div style="font-size:12px;min-width:90px;font-weight:600">${p}</div>
-        <select id="edit-stock-${shopId}-${key}" style="flex:1;padding:8px 10px;background:var(--s2);border:1px solid var(--b1);border-radius:8px;color:var(--t1);font-size:12px;font-family:var(--f);outline:none">
+      return`<div style="display:flex;align-items:center;gap:10px;margin-bottom:7px">
+        <div style="font-size:16px;min-width:117px;font-weight:600">${p}</div>
+        <select id="edit-stock-${shopId}-${key}" style="flex:1;padding:10px 10px;background:var(--s2);border:1px solid var(--b1);border-radius:10px;color:var(--t1);font-size:16px;font-family:var(--f);outline:none">
           <option value="">— Chọn —</option>
           ${['Tốt','Thấp','Trung bình','Hết hàng'].map(o=>`<option${cur===o?' selected':''}>${o}</option>`).join('')}
         </select>
       </div>`;
     }).join('')}
 
-    <div style="font-size:10px;font-weight:700;color:var(--t3);margin:12px 0 8px;text-transform:uppercase;letter-spacing:.5px">📌 Trưng bày & Demo</div>
+    <div style="font-size:13px;font-weight:700;color:var(--t3);margin:16px 0 8px;text-transform:uppercase;letter-spacing:.5px">📌 Trưng bày & Demo</div>
     ${[['POSM','posm'],['Demo device','demo'],['Apple zone','zone']].map(([l,k])=>{
       const cur=getShopBI(shopId).posm?.[k]||'';
-      return`<div style="display:flex;align-items:center;gap:8px;margin-bottom:7px">
-        <div style="font-size:12px;min-width:90px;font-weight:600">${l}</div>
-        <select id="edit-posm-${shopId}-${k}" style="flex:1;padding:8px 10px;background:var(--s2);border:1px solid var(--b1);border-radius:8px;color:var(--t1);font-size:12px;font-family:var(--f);outline:none">
+      return`<div style="display:flex;align-items:center;gap:10px;margin-bottom:7px">
+        <div style="font-size:16px;min-width:117px;font-weight:600">${l}</div>
+        <select id="edit-posm-${shopId}-${k}" style="flex:1;padding:10px 10px;background:var(--s2);border:1px solid var(--b1);border-radius:10px;color:var(--t1);font-size:16px;font-family:var(--f);outline:none">
           <option value="">— Chọn —</option>
           ${['Tốt','Thiếu một số','Không có','Lỗi/Hỏng'].map(o=>`<option${cur===o?' selected':''}>${o}</option>`).join('')}
         </select>
       </div>`;
     }).join('')}
 
-    <div style="font-size:10px;font-weight:700;color:var(--t3);margin:12px 0 8px;text-transform:uppercase;letter-spacing:.5px">👥 Thái độ nhân sự</div>
-    <div style="display:flex;align-items:center;gap:8px;margin-bottom:7px">
-      <div style="font-size:12px;min-width:90px;font-weight:600">Staff</div>
-      <select id="edit-staff-${shopId}" style="flex:1;padding:8px 10px;background:var(--s2);border:1px solid var(--b1);border-radius:8px;color:var(--t1);font-size:12px;font-family:var(--f);outline:none">
+    <div style="font-size:13px;font-weight:700;color:var(--t3);margin:16px 0 8px;text-transform:uppercase;letter-spacing:.5px">👥 Thái độ nhân sự</div>
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:7px">
+      <div style="font-size:16px;min-width:117px;font-weight:600">Staff</div>
+      <select id="edit-staff-${shopId}" style="flex:1;padding:10px 10px;background:var(--s2);border:1px solid var(--b1);border-radius:10px;color:var(--t1);font-size:16px;font-family:var(--f);outline:none">
         <option value="">— Chọn —</option>
         ${['Rất tích cực','Tích cực','Trung lập','Tiêu cực'].map(o=>`<option${(getShopBI(shopId).staff_attitude||'')===o?' selected':''}>${o}</option>`).join('')}
       </select>
     </div>
 
-    <div style="font-size:10px;font-weight:700;color:var(--t3);margin:12px 0 8px;text-transform:uppercase;letter-spacing:.5px">📝 Ghi chú</div>
-    <textarea id="edit-note-${shopId}" placeholder="Ghi chú về shop..." style="width:100%;padding:10px;background:var(--s2);border:1px solid var(--b1);border-radius:9px;color:var(--t1);font-size:12px;font-family:var(--f);outline:none;resize:none;min-height:72px;line-height:1.5">${getShopBI(shopId).note||''}</textarea>
+    <div style="font-size:13px;font-weight:700;color:var(--t3);margin:16px 0 8px;text-transform:uppercase;letter-spacing:.5px">📝 Ghi chú</div>
+    <textarea id="edit-note-${shopId}" placeholder="Ghi chú về shop..." style="width:100%;padding:13px;background:var(--s2);border:1px solid var(--b1);border-radius:12px;color:var(--t1);font-size:16px;font-family:var(--f);outline:none;resize:none;min-height:94px;line-height:1.5">${getShopBI(shopId).note||''}</textarea>
 
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px">
-      <button onclick="toggleShopEditForm(${shopId})" style="padding:12px;border-radius:11px;background:var(--s2);border:1px solid var(--b1);color:var(--t2);font-size:12px;font-weight:700;cursor:pointer;font-family:var(--f)">Huỷ</button>
-      <button onclick="saveShopEditForm(${shopId})" style="padding:12px;border-radius:11px;background:var(--blue);border:none;color:white;font-size:12px;font-weight:800;cursor:pointer;font-family:var(--f)">💾 Lưu</button>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px">
+      <button onclick="toggleShopEditForm(${shopId})" style="padding:16px;border-radius:14px;background:var(--s2);border:1px solid var(--b1);color:var(--t2);font-size:16px;font-weight:700;cursor:pointer;font-family:var(--f)">Huỷ</button>
+      <button onclick="saveShopEditForm(${shopId})" style="padding:16px;border-radius:14px;background:var(--blue);border:none;color:white;font-size:16px;font-weight:800;cursor:pointer;font-family:var(--f)">💾 Lưu</button>
     </div>
   </div>
 
-  <button onclick="exportAreaBI()" style="width:100%;padding:13px;border-radius:12px;background:var(--s2);border:1px solid var(--b1);color:var(--t2);font-size:12px;font-weight:700;cursor:pointer;font-family:var(--f);margin-bottom:16px">🗂 Xuất file tổng khu vực</button>`;
+  <button onclick="exportAreaBI()" style="width:100%;padding:17px;border-radius:16px;background:var(--s2);border:1px solid var(--b1);color:var(--t2);font-size:16px;font-weight:700;cursor:pointer;font-family:var(--f);margin-bottom:16px">🗂 Xuất file tổng khu vực</button>`;
   const _cont=document.getElementById(_cid);
   if(_cont) _cont.innerHTML=html;
   setTimeout(()=>{
@@ -1961,23 +1961,23 @@ function getStaffSM(appleId){return STAFF_DATA.sm[appleId]||[];}
 function getStaffNV(appleId){return STAFF_DATA.nv[appleId]||[];}
 
 function renderStars(score){
-  if(score===null||score===undefined||score==='')return `<span style="color:var(--t3);font-size:10px">N/A</span>`;
+  if(score===null||score===undefined||score==='')return `<span style="color:var(--t3);font-size:13px">N/A</span>`;
   const n=parseFloat(score),full=Math.floor(n),half=(n-full)>=0.5;
   const c=n>=4?'var(--green)':n>=3?'var(--orange)':'var(--red)';
-  let s='';for(let i=1;i<=5;i++){if(i<=full)s+=`<span style="color:${c};font-size:11px">⭐</span>`;else if(i===full+1&&half)s+=`<span style="color:${c};font-size:11px;opacity:.5">⭐</span>`;else s+=`<span style="color:var(--t4);font-size:11px">⭐</span>`;}
-  return `<span style="display:inline-flex;align-items:center;gap:1px">${s}<span style="font-size:10px;font-family:var(--m);color:${c};margin-left:4px;font-weight:700">${n}</span></span>`;
+  let s='';for(let i=1;i<=5;i++){if(i<=full)s+=`<span style="color:${c};font-size:14px">⭐</span>`;else if(i===full+1&&half)s+=`<span style="color:${c};font-size:14px;opacity:.5">⭐</span>`;else s+=`<span style="color:var(--t4);font-size:14px">⭐</span>`;}
+  return `<span style="display:inline-flex;align-items:center;gap:1px">${s}<span style="font-size:13px;font-family:var(--m);color:${c};margin-left:4px;font-weight:700">${n}</span></span>`;
 }
 
 function scoreBar(label,score){
-  if(score===null||score===undefined||score==='')return `<div style="display:flex;align-items:center;gap:8px;margin-bottom:7px"><div style="font-size:10px;color:var(--t2);min-width:130px">${label}</div><span style="font-size:10px;color:var(--t3)">N/A</span></div>`;
+  if(score===null||score===undefined||score==='')return `<div style="display:flex;align-items:center;gap:10px;margin-bottom:7px"><div style="font-size:13px;color:var(--t2);min-width:169px">${label}</div><span style="font-size:13px;color:var(--t3)">N/A</span></div>`;
   const n=parseFloat(score),pct=n/5*100,c=n>=4?'var(--green)':n>=3?'var(--orange)':'var(--red)';
-  return `<div style="display:flex;align-items:center;gap:8px;margin-bottom:7px"><div style="font-size:10px;color:var(--t2);min-width:130px">${label}</div><div style="flex:1;height:6px;background:var(--t4);border-radius:3px;overflow:hidden"><div style="height:100%;width:${pct}%;background:${c};border-radius:3px"></div></div><div style="font-size:10px;font-family:var(--m);font-weight:700;color:${c};min-width:22px;text-align:right">${n}</div></div>`;
+  return `<div style="display:flex;align-items:center;gap:10px;margin-bottom:7px"><div style="font-size:13px;color:var(--t2);min-width:169px">${label}</div><div style="flex:1;height:6px;background:var(--t4);border-radius:4px;overflow:hidden"><div style="height:100%;width:${pct}%;background:${c};border-radius:4px"></div></div><div style="font-size:13px;font-family:var(--m);font-weight:700;color:${c};min-width:29px;text-align:right">${n}</div></div>`;
 }
 
 function statusBadge(s){
   if(!s)return '';
   const c=s==='Bình thường'?'var(--green)':s==='Nghỉ việc'?'var(--red)':s==='Chuyển khu vực'?'var(--orange)':'var(--t3)';
-  return `<span style="font-size:9px;font-weight:700;padding:2px 8px;border-radius:5px;background:${c}20;color:${c}">${s}</span>`;
+  return `<span style="font-size:12px;font-weight:700;padding:3px 8px;border-radius:6px;background:${c}20;color:${c}">${s}</span>`;
 }
 
 function openStaffProfile(type,name,appleId){
@@ -1994,17 +1994,17 @@ function renderSMProfile(sm,appleId){
   document.getElementById('staffTitle').textContent=sm?.name||'—';
   document.getElementById('staffMeta').textContent=(sm?.role||'SM')+' · '+(shop?shop.sh:'—');
   document.getElementById('staffContent').innerHTML=`
-    <div style="background:linear-gradient(135deg,rgba(10,132,255,.12),rgba(10,132,255,.04));border:1px solid rgba(10,132,255,.25);border-radius:var(--r);padding:16px;margin-bottom:12px;display:flex;align-items:center;gap:13px">
-      <div style="width:52px;height:52px;border-radius:14px;background:rgba(10,132,255,.18);display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0">👔</div>
-      <div style="flex:1"><div style="font-size:17px;font-weight:900">${sm?.name||'—'}</div><div style="font-size:11px;color:var(--t2);margin-top:3px">${sm?.role||'SM'}</div>
-      ${shop?`<div style="margin-top:6px;display:flex;align-items:center;gap:6px">${chainLogo(shop.chain,18)}<span style="font-size:11px;color:var(--t3)">${shop.sh}</span></div>`:''}
+    <div style="background:linear-gradient(135deg,rgba(10,132,255,.12),rgba(10,132,255,.04));border:1px solid rgba(10,132,255,.25);border-radius:var(--r);padding:21px;margin-bottom:12px;display:flex;align-items:center;gap:17px">
+      <div style="width:52px;height:52px;border-radius:18px;background:rgba(10,132,255,.18);display:flex;align-items:center;justify-content:center;font-size:31px;flex-shrink:0">👔</div>
+      <div style="flex:1"><div style="font-size:22px;font-weight:900">${sm?.name||'—'}</div><div style="font-size:14px;color:var(--t2);margin-top:3px">${sm?.role||'SM'}</div>
+      ${shop?`<div style="margin-top:6px;display:flex;align-items:center;gap:8px">${chainLogo(shop.chain,18)}<span style="font-size:14px;color:var(--t3)">${shop.sh}</span></div>`:''}
       </div>
     </div>
-    <div style="background:var(--s1);border:1px solid var(--b1);border-radius:var(--r);padding:14px;margin-bottom:12px">
-      <div style="font-size:10px;font-weight:800;color:var(--t3);text-transform:uppercase;letter-spacing:.7px;margin-bottom:12px">⭐ Đánh giá (thang 1-5)</div>
+    <div style="background:var(--s1);border:1px solid var(--b1);border-radius:var(--r);padding:18px;margin-bottom:12px">
+      <div style="font-size:13px;font-weight:800;color:var(--t3);text-transform:uppercase;letter-spacing:.7px;margin-bottom:12px">⭐ Đánh giá (thang 1-5)</div>
       ${scoreBar('Thân thiết với CS',sm?.than_thiet)}${scoreBar('Hợp tác với CS',sm?.hop_tac)}${scoreBar('Vận hành nghiệp vụ',sm?.van_hanh)}${scoreBar('Yêu thích Apple',sm?.yeu_apple)}${scoreBar('Hardness',sm?.hardness)}
     </div>
-    ${sm?.note?`<div style="background:var(--od);border-radius:var(--r);padding:12px"><div style="font-size:10px;font-weight:800;color:var(--orange);margin-bottom:5px">📝 Ghi chú</div><div style="font-size:12px">${sm.note}</div></div>`:''}`;
+    ${sm?.note?`<div style="background:var(--od);border-radius:var(--r);padding:16px"><div style="font-size:13px;font-weight:800;color:var(--orange);margin-bottom:5px">📝 Ghi chú</div><div style="font-size:16px">${sm.note}</div></div>`:''}`;
 }
 
 function renderNVProfile(nv,appleId){
@@ -2014,70 +2014,70 @@ function renderNVProfile(nv,appleId){
   document.getElementById('staffTitle').textContent=nv?.name||'—';
   document.getElementById('staffMeta').textContent=(nv?.aep||'NV')+' · '+(shop?shop.sh:'—');
   document.getElementById('staffContent').innerHTML=`
-    <div style="background:${isChamp?'rgba(255,159,10,.08)':'rgba(255,255,255,.04)'};border:1px solid ${isChamp?'rgba(255,159,10,.25)':'var(--b1)'};border-radius:var(--r);padding:16px;margin-bottom:12px;display:flex;align-items:center;gap:13px">
-      <div style="width:52px;height:52px;border-radius:14px;background:${isChamp?'rgba(255,159,10,.18)':'rgba(255,255,255,.08)'};display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0">${isChamp?'⭐':'👤'}</div>
-      <div style="flex:1"><div style="font-size:17px;font-weight:900">${nv?.name||'—'}</div>
-        <div style="display:flex;flex-wrap:wrap;gap:5px;margin-top:5px">
-          <span style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:5px;background:${isChamp?'rgba(255,159,10,.18)':'rgba(255,255,255,.08)'};color:${isChamp?'var(--orange)':'var(--t2)'}">${nv?.aep||'Member'}</span>
+    <div style="background:${isChamp?'rgba(255,159,10,.08)':'rgba(255,255,255,.04)'};border:1px solid ${isChamp?'rgba(255,159,10,.25)':'var(--b1)'};border-radius:var(--r);padding:21px;margin-bottom:12px;display:flex;align-items:center;gap:17px">
+      <div style="width:52px;height:52px;border-radius:18px;background:${isChamp?'rgba(255,159,10,.18)':'rgba(255,255,255,.08)'};display:flex;align-items:center;justify-content:center;font-size:31px;flex-shrink:0">${isChamp?'⭐':'👤'}</div>
+      <div style="flex:1"><div style="font-size:22px;font-weight:900">${nv?.name||'—'}</div>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:5px">
+          <span style="font-size:13px;font-weight:700;padding:3px 8px;border-radius:6px;background:${isChamp?'rgba(255,159,10,.18)':'rgba(255,255,255,.08)'};color:${isChamp?'var(--orange)':'var(--t2)'}">${nv?.aep||'Member'}</span>
           ${statusBadge(nv?.status)}
-          ${tieu_cuc?`<span style="font-size:9px;font-weight:700;padding:2px 8px;border-radius:5px;background:rgba(255,69,58,.15);color:var(--red)">⚠ Tiêu cực Apple</span>`:''}
+          ${tieu_cuc?`<span style="font-size:12px;font-weight:700;padding:3px 8px;border-radius:6px;background:rgba(255,69,58,.15);color:var(--red)">⚠ Tiêu cực Apple</span>`:''}
         </div>
-        ${shop?`<div style="margin-top:6px;display:flex;align-items:center;gap:6px">${chainLogo(shop.chain,18)}<span style="font-size:11px;color:var(--t3)">${shop.sh}</span></div>`:''}
+        ${shop?`<div style="margin-top:6px;display:flex;align-items:center;gap:8px">${chainLogo(shop.chain,18)}<span style="font-size:14px;color:var(--t3)">${shop.sh}</span></div>`:''}
       </div>
     </div>
-    ${(nv?.email)?`<div style="background:var(--s1);border:1px solid var(--b1);border-radius:var(--r);padding:13px;margin-bottom:12px">
-      <div style="font-size:10px;font-weight:800;color:var(--t3);text-transform:uppercase;letter-spacing:.7px;margin-bottom:8px">📬 Liên hệ</div>
-      <div style="display:flex;gap:8px;padding:6px 0"><span style="font-size:10px;color:var(--t3);min-width:50px">Email</span><span style="font-size:11px;color:var(--blue);word-break:break-all">${nv.email}</span></div>
+    ${(nv?.email)?`<div style="background:var(--s1);border:1px solid var(--b1);border-radius:var(--r);padding:17px;margin-bottom:12px">
+      <div style="font-size:13px;font-weight:800;color:var(--t3);text-transform:uppercase;letter-spacing:.7px;margin-bottom:8px">📬 Liên hệ</div>
+      <div style="display:flex;gap:10px;padding:8px 0"><span style="font-size:13px;color:var(--t3);min-width:65px">Email</span><span style="font-size:14px;color:var(--blue);word-break:break-all">${nv.email}</span></div>
     </div>`:''}
-    <div style="background:var(--s1);border:1px solid var(--b1);border-radius:var(--r);padding:14px;margin-bottom:12px">
-      <div style="font-size:10px;font-weight:800;color:var(--t3);text-transform:uppercase;letter-spacing:.7px;margin-bottom:12px">📱 Kiến thức sản phẩm</div>
+    <div style="background:var(--s1);border:1px solid var(--b1);border-radius:var(--r);padding:18px;margin-bottom:12px">
+      <div style="font-size:13px;font-weight:800;color:var(--t3);text-transform:uppercase;letter-spacing:.7px;margin-bottom:12px">📱 Kiến thức sản phẩm</div>
       ${scoreBar('iPhone',nv?.iphone)}${scoreBar('iPad',nv?.ipad)}${scoreBar('Mac',nv?.mac)}${scoreBar('Apple Watch',nv?.aw)}${scoreBar('Kỹ năng tư vấn',nv?.ky_nang)}
     </div>
-    <div style="background:var(--s1);border:1px solid var(--b1);border-radius:var(--r);padding:14px;margin-bottom:12px">
-      <div style="font-size:10px;font-weight:800;color:var(--t3);text-transform:uppercase;letter-spacing:.7px;margin-bottom:12px">🤝 Thái độ & Hợp tác</div>
+    <div style="background:var(--s1);border:1px solid var(--b1);border-radius:var(--r);padding:18px;margin-bottom:12px">
+      <div style="font-size:13px;font-weight:800;color:var(--t3);text-transform:uppercase;letter-spacing:.7px;margin-bottom:12px">🤝 Thái độ & Hợp tác</div>
       ${scoreBar('Mức độ thân thiện',nv?.than_thien)}${scoreBar('Hợp tác',nv?.hop_tac)}
-      <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0">
-        <span style="font-size:11px;color:var(--t2)">Tiêu cực vs Apple</span>
-        <span style="font-size:11px;font-weight:700;color:${tieu_cuc?'var(--red)':'var(--green)'}">${tieu_cuc?'⚠ Có':'✓ Không'}</span>
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 0">
+        <span style="font-size:14px;color:var(--t2)">Tiêu cực vs Apple</span>
+        <span style="font-size:14px;font-weight:700;color:${tieu_cuc?'var(--red)':'var(--green)'}">${tieu_cuc?'⚠ Có':'✓ Không'}</span>
       </div>
     </div>
-    ${nv?.note?`<div style="background:var(--od);border-radius:var(--r);padding:12px"><div style="font-size:10px;font-weight:800;color:var(--orange);margin-bottom:5px">📝 Ghi chú</div><div style="font-size:12px">${nv.note}</div></div>`:''}`;
+    ${nv?.note?`<div style="background:var(--od);border-radius:var(--r);padding:16px"><div style="font-size:13px;font-weight:800;color:var(--orange);margin-bottom:5px">📝 Ghi chú</div><div style="font-size:16px">${nv.note}</div></div>`:''}`;
 }
 
 function renderShopStaffList(shop,containerEl){
   const aid=shop.appleId;
   const smList=getStaffSM(aid),nvList=getStaffNV(aid);
-  if(!smList.length&&!nvList.length){containerEl.innerHTML=`<div style="text-align:center;padding:16px;color:var(--t3);font-size:12px">Không có dữ liệu nhân sự</div>`;return;}
+  if(!smList.length&&!nvList.length){containerEl.innerHTML=`<div style="text-align:center;padding:21px;color:var(--t3);font-size:16px">Không có dữ liệu nhân sự</div>`;return;}
   function avgScore(scores){const f=scores.filter(v=>v!==null&&v!=='');return f.length?(f.reduce((a,b)=>a+parseFloat(b),0)/f.length).toFixed(1):null;}
   function scoreColor(avg){return !avg?'var(--t3)':parseFloat(avg)>=4?'var(--green)':parseFloat(avg)>=3?'var(--orange)':'var(--red)';}
 
   let html='';
   if(smList.length){
-    html+=`<div style="font-size:9px;font-weight:800;color:var(--blue);text-transform:uppercase;letter-spacing:.5px;padding:7px 13px;background:rgba(10,132,255,.06);border-bottom:1px solid var(--b1)">Store Manager · ${smList.length}</div>`;
+    html+=`<div style="font-size:12px;font-weight:800;color:var(--blue);text-transform:uppercase;letter-spacing:.5px;padding:9px 13px;background:rgba(10,132,255,.06);border-bottom:1px solid var(--b1)">Store Manager · ${smList.length}</div>`;
     html+=smList.map(sm=>{
       const avg=avgScore([sm.than_thiet,sm.hop_tac,sm.van_hanh,sm.yeu_apple,sm.hardness]);
       const c=scoreColor(avg);
-      return `<div style="display:flex;align-items:center;gap:10px;padding:11px 13px;border-bottom:1px solid var(--b1);cursor:pointer" onclick="openStaffProfile('SM','${sm.name.replace(/'/g,"\\'")}',${aid})">
-        <div style="width:36px;height:36px;border-radius:10px;background:rgba(10,132,255,.1);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0">👔</div>
-        <div style="flex:1"><div style="font-size:13px;font-weight:800">${sm.name}</div><div style="font-size:10px;color:var(--t3)">${sm.role||'SM'}</div></div>
-        <div style="text-align:right">${avg?`<div style="font-size:13px;font-weight:800;color:${c}">${avg}★</div>`:'<div style="font-size:10px;color:var(--t3)">N/A</div>'}
-        <div style="font-size:10px;color:var(--t3)">›</div></div>
+      return `<div style="display:flex;align-items:center;gap:13px;padding:14px 13px;border-bottom:1px solid var(--b1);cursor:pointer" onclick="openStaffProfile('SM','${sm.name.replace(/'/g,"\\'")}',${aid})">
+        <div style="width:36px;height:36px;border-radius:13px;background:rgba(10,132,255,.1);display:flex;align-items:center;justify-content:center;font-size:23px;flex-shrink:0">👔</div>
+        <div style="flex:1"><div style="font-size:17px;font-weight:800">${sm.name}</div><div style="font-size:13px;color:var(--t3)">${sm.role||'SM'}</div></div>
+        <div style="text-align:right">${avg?`<div style="font-size:17px;font-weight:800;color:${c}">${avg}★</div>`:'<div style="font-size:13px;color:var(--t3)">N/A</div>'}
+        <div style="font-size:13px;color:var(--t3)">›</div></div>
       </div>`;
     }).join('');
   }
   if(nvList.length){
-    html+=`<div style="font-size:9px;font-weight:800;color:var(--t3);text-transform:uppercase;letter-spacing:.5px;padding:7px 13px;background:var(--s2);border-bottom:1px solid var(--b1);border-top:1px solid var(--b1)">Nhân viên · ${nvList.length}</div>`;
+    html+=`<div style="font-size:12px;font-weight:800;color:var(--t3);text-transform:uppercase;letter-spacing:.5px;padding:9px 13px;background:var(--s2);border-bottom:1px solid var(--b1);border-top:1px solid var(--b1)">Nhân viên · ${nvList.length}</div>`;
     html+=nvList.map(nv=>{
       const isChamp=nv.aep==='Champion'||nv.aep==='Champion+';
       const isLeft=nv.status==='Nghỉ việc';
       const avg=avgScore([nv.iphone,nv.ipad,nv.mac,nv.aw,nv.ky_nang]);
       const c=scoreColor(avg);
-      return `<div style="display:flex;align-items:center;gap:10px;padding:10px 13px;border-bottom:1px solid var(--b1);cursor:pointer;${isLeft?'opacity:.45':''}" onclick="openStaffProfile('NV','${nv.name.replace(/'/g,"\\'")}',${aid})">
-        <div style="width:36px;height:36px;border-radius:10px;background:${isChamp?'rgba(255,159,10,.1)':'rgba(255,255,255,.06)'};display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0">${isChamp?'⭐':'👤'}</div>
-        <div style="flex:1"><div style="font-size:12px;font-weight:700;${isLeft?'text-decoration:line-through':''}">${nv.name}</div>
-        <div style="font-size:10px;color:var(--t3)">${nv.aep||'Member'}${isLeft?' · Nghỉ':nv.status==='Chuyển khu vực'?' · Chuyển KV':''}</div></div>
-        <div style="text-align:right">${avg?`<div style="font-size:12px;font-weight:700;color:${c}">${avg}★</div>`:'<div style="font-size:10px;color:var(--t3)">N/A</div>'}
-        <div style="font-size:10px;color:var(--t3)">›</div></div>
+      return `<div style="display:flex;align-items:center;gap:13px;padding:13px 13px;border-bottom:1px solid var(--b1);cursor:pointer;${isLeft?'opacity:.45':''}" onclick="openStaffProfile('NV','${nv.name.replace(/'/g,"\\'")}',${aid})">
+        <div style="width:36px;height:36px;border-radius:13px;background:${isChamp?'rgba(255,159,10,.1)':'rgba(255,255,255,.06)'};display:flex;align-items:center;justify-content:center;font-size:21px;flex-shrink:0">${isChamp?'⭐':'👤'}</div>
+        <div style="flex:1"><div style="font-size:16px;font-weight:700;${isLeft?'text-decoration:line-through':''}">${nv.name}</div>
+        <div style="font-size:13px;color:var(--t3)">${nv.aep||'Member'}${isLeft?' · Nghỉ':nv.status==='Chuyển khu vực'?' · Chuyển KV':''}</div></div>
+        <div style="text-align:right">${avg?`<div style="font-size:16px;font-weight:700;color:${c}">${avg}★</div>`:'<div style="font-size:13px;color:var(--t3)">N/A</div>'}
+        <div style="font-size:13px;color:var(--t3)">›</div></div>
       </div>`;
     }).join('');
   }
@@ -2089,45 +2089,45 @@ function buildAllStaffHTML(){
   const allNV=Object.values(STAFF_DATA.nv).flat();
   const champs=allNV.filter(n=>n.aep==='Champion'||n.aep==='Champion+').length;
   const active=allNV.filter(n=>n.status==='Bình thường').length;
-  let html=`<div style="display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-bottom:12px">
+  let html=`<div style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:12px">
     ${[['👔','SM',totalSM,'var(--blue)'],['👥','NV',allNV.length,'var(--orange)'],['⭐','Champion',champs,'var(--green)'],['✓','Đang làm',active,'var(--cyan)']].map(([i,l,v,c])=>`
-    <div style="background:var(--s1);border:1px solid var(--b1);border-radius:var(--r);padding:12px;text-align:center">
-      <div style="font-size:18px;margin-bottom:4px">${i}</div>
-      <div style="font-size:18px;font-weight:900;font-family:var(--m);color:${c}">${v}</div>
-      <div style="font-size:10px;color:var(--t3);margin-top:2px">${l}</div>
+    <div style="background:var(--s1);border:1px solid var(--b1);border-radius:var(--r);padding:16px;text-align:center">
+      <div style="font-size:23px;margin-bottom:4px">${i}</div>
+      <div style="font-size:23px;font-weight:900;font-family:var(--m);color:${c}">${v}</div>
+      <div style="font-size:13px;color:var(--t3);margin-top:2px">${l}</div>
     </div>`).join('')}
   </div>
-  <div style="font-size:10px;font-weight:800;color:var(--t3);text-transform:uppercase;letter-spacing:.7px;margin-bottom:8px">13 Shop khu vực</div>`;
+  <div style="font-size:13px;font-weight:800;color:var(--t3);text-transform:uppercase;letter-spacing:.7px;margin-bottom:8px">13 Shop khu vực</div>`;
 
   SHOPS.forEach(s=>{
     const sms=getStaffSM(s.appleId),nvs=getStaffNV(s.appleId);
     if(!sms.length&&!nvs.length)return;
     html+=`<div style="background:var(--s1);border:1px solid var(--b1);border-radius:var(--r);overflow:hidden;margin-bottom:8px">
-      <div style="padding:10px 13px;background:var(--s2);border-bottom:1px solid var(--b1);display:flex;align-items:center;gap:8px;cursor:pointer"
+      <div style="padding:13px 13px;background:var(--s2);border-bottom:1px solid var(--b1);display:flex;align-items:center;gap:10px;cursor:pointer"
           onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='none'?'block':'none'">
         ${chainLogo(s.chain,20)}
-        <div style="flex:1;min-width:0"><div style="font-size:11px;font-weight:800;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${s.sh}</div><div style="font-size:9px;color:var(--t3)">${s.reg}</div></div>
-        ${sms.length?`<span style="font-size:9px;font-weight:700;padding:2px 7px;border-radius:5px;background:rgba(10,132,255,.1);color:var(--blue)">${sms.length} SM</span>`:''}
-        ${nvs.length?`<span style="font-size:9px;font-weight:700;padding:2px 7px;border-radius:5px;background:rgba(255,159,10,.1);color:var(--orange)">${nvs.length} NV</span>`:''}
-        <span style="font-size:14px;color:var(--t3)">›</span>
+        <div style="flex:1;min-width:0"><div style="font-size:14px;font-weight:800;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${s.sh}</div><div style="font-size:12px;color:var(--t3)">${s.reg}</div></div>
+        ${sms.length?`<span style="font-size:12px;font-weight:700;padding:3px 7px;border-radius:6px;background:rgba(10,132,255,.1);color:var(--blue)">${sms.length} SM</span>`:''}
+        ${nvs.length?`<span style="font-size:12px;font-weight:700;padding:3px 7px;border-radius:6px;background:rgba(255,159,10,.1);color:var(--orange)">${nvs.length} NV</span>`:''}
+        <span style="font-size:18px;color:var(--t3)">›</span>
       </div>
       <div style="display:none">
-        ${sms.length?`<div style="font-size:9px;font-weight:800;color:var(--blue);letter-spacing:.5px;padding:6px 13px;background:rgba(10,132,255,.05);border-bottom:1px solid var(--b1)">SM</div>`:``}
-        ${sms.map(sm=>`<div style="display:flex;align-items:center;gap:9px;padding:9px 13px;border-bottom:1px solid var(--b1);cursor:pointer"
+        ${sms.length?`<div style="font-size:12px;font-weight:800;color:var(--blue);letter-spacing:.5px;padding:8px 13px;background:rgba(10,132,255,.05);border-bottom:1px solid var(--b1)">SM</div>`:``}
+        ${sms.map(sm=>`<div style="display:flex;align-items:center;gap:12px;padding:12px 13px;border-bottom:1px solid var(--b1);cursor:pointer"
               onclick="openStaffProfile('SM','${sm.name.replace(/'/g,"\\'")}',${s.appleId})">
-          <div style="width:30px;height:30px;border-radius:8px;background:rgba(10,132,255,.1);display:flex;align-items:center;justify-content:center;font-size:14px">👔</div>
-          <div style="flex:1"><div style="font-size:12px;font-weight:700">${sm.name}</div><div style="font-size:9px;color:var(--t3)">${sm.role||'SM'}</div></div>
-          <span style="font-size:12px;color:var(--t3)">›</span>
+          <div style="width:30px;height:30px;border-radius:10px;background:rgba(10,132,255,.1);display:flex;align-items:center;justify-content:center;font-size:18px">👔</div>
+          <div style="flex:1"><div style="font-size:16px;font-weight:700">${sm.name}</div><div style="font-size:12px;color:var(--t3)">${sm.role||'SM'}</div></div>
+          <span style="font-size:16px;color:var(--t3)">›</span>
         </div>`).join('')}
-        ${nvs.length?`<div style="font-size:9px;font-weight:800;color:var(--t3);letter-spacing:.5px;padding:6px 13px;background:var(--s2);border-bottom:1px solid var(--b1);border-top:1px solid var(--b1)">NV</div>`:``}
+        ${nvs.length?`<div style="font-size:12px;font-weight:800;color:var(--t3);letter-spacing:.5px;padding:8px 13px;background:var(--s2);border-bottom:1px solid var(--b1);border-top:1px solid var(--b1)">NV</div>`:``}
         ${nvs.map(nv=>{
           const ic=nv.aep==='Champion'||nv.aep==='Champion+';
           const il=nv.status==='Nghỉ việc';
-          return `<div style="display:flex;align-items:center;gap:9px;padding:9px 13px;border-bottom:1px solid var(--b1);cursor:pointer;${il?'opacity:.45':''}"
+          return `<div style="display:flex;align-items:center;gap:12px;padding:12px 13px;border-bottom:1px solid var(--b1);cursor:pointer;${il?'opacity:.45':''}"
               onclick="openStaffProfile('NV','${nv.name.replace(/'/g,"\\'")}',${s.appleId})">
-            <div style="width:30px;height:30px;border-radius:8px;background:${ic?'rgba(255,159,10,.1)':'rgba(255,255,255,.06)'};display:flex;align-items:center;justify-content:center;font-size:13px">${ic?'⭐':'👤'}</div>
-            <div style="flex:1"><div style="font-size:12px;font-weight:700;${il?'text-decoration:line-through':''}">${nv.name}</div><div style="font-size:9px;color:var(--t3)">${nv.aep||'Member'}${il?' · Nghỉ':''}</div></div>
-            <span style="font-size:12px;color:var(--t3)">›</span>
+            <div style="width:30px;height:30px;border-radius:10px;background:${ic?'rgba(255,159,10,.1)':'rgba(255,255,255,.06)'};display:flex;align-items:center;justify-content:center;font-size:17px">${ic?'⭐':'👤'}</div>
+            <div style="flex:1"><div style="font-size:16px;font-weight:700;${il?'text-decoration:line-through':''}">${nv.name}</div><div style="font-size:12px;color:var(--t3)">${nv.aep||'Member'}${il?' · Nghỉ':''}</div></div>
+            <span style="font-size:16px;color:var(--t3)">›</span>
           </div>`;
         }).join('')}
       </div>
@@ -2138,20 +2138,20 @@ function buildAllStaffHTML(){
   const ourAids=new Set(SHOPS.map(s=>s.appleId));
   const extraEntries=Object.entries(STAFF_DATA.nv).filter(([aid])=>!ourAids.has(parseInt(aid)));
   if(extraEntries.length){
-    html+=`<div style="font-size:10px;font-weight:800;color:var(--t3);text-transform:uppercase;letter-spacing:.7px;margin:14px 0 8px">Ngoài khu vực</div>`;
+    html+=`<div style="font-size:13px;font-weight:800;color:var(--t3);text-transform:uppercase;letter-spacing:.7px;margin:18px 0 8px">Ngoài khu vực</div>`;
     extraEntries.forEach(([aid,nvs])=>{
       html+=`<div style="background:var(--s1);border:1px solid var(--b1);border-radius:var(--r);overflow:hidden;margin-bottom:7px;opacity:.7">
-        <div style="padding:9px 13px;background:var(--s2);border-bottom:1px solid var(--b1);display:flex;align-items:center;gap:8px;cursor:pointer"
+        <div style="padding:12px 13px;background:var(--s2);border-bottom:1px solid var(--b1);display:flex;align-items:center;gap:10px;cursor:pointer"
             onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='none'?'block':'none'">
-          <div style="flex:1;font-size:11px;font-weight:700;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${nvs[0]?.shop||'Apple ID '+aid}</div>
-          <span style="font-size:9px;padding:2px 6px;border-radius:5px;background:rgba(255,255,255,.06);color:var(--t3)">${nvs.length} NV</span>
-          <span style="font-size:14px;color:var(--t3)">›</span>
+          <div style="flex:1;font-size:14px;font-weight:700;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${nvs[0]?.shop||'Apple ID '+aid}</div>
+          <span style="font-size:12px;padding:3px 6px;border-radius:6px;background:rgba(255,255,255,.06);color:var(--t3)">${nvs.length} NV</span>
+          <span style="font-size:18px;color:var(--t3)">›</span>
         </div>
         <div style="display:none">
-          ${nvs.map(nv=>`<div style="display:flex;align-items:center;gap:9px;padding:9px 13px;border-bottom:1px solid var(--b1);cursor:pointer"
+          ${nvs.map(nv=>`<div style="display:flex;align-items:center;gap:12px;padding:12px 13px;border-bottom:1px solid var(--b1);cursor:pointer"
               onclick="openStaffProfile('NV','${nv.name.replace(/'/g,"\\'")}',${aid})">
-            <div style="width:28px;height:28px;border-radius:8px;background:rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center;font-size:12px">${nv.aep==='Champion'?'⭐':'👤'}</div>
-            <div style="flex:1"><div style="font-size:12px;font-weight:700">${nv.name}</div><div style="font-size:9px;color:var(--t3)">${nv.aep||'Member'}</div></div>
+            <div style="width:28px;height:28px;border-radius:10px;background:rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center;font-size:16px">${nv.aep==='Champion'?'⭐':'👤'}</div>
+            <div style="flex:1"><div style="font-size:16px;font-weight:700">${nv.name}</div><div style="font-size:12px;color:var(--t3)">${nv.aep||'Member'}</div></div>
           </div>`).join('')}
         </div>
       </div>`;
@@ -2348,28 +2348,28 @@ function renderNhaplieu(){switchDataTab('lich');}
 
 function renderDtLich(){
   document.getElementById('dt-lich').innerHTML=`
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-bottom:10px">
-      <div style="background:var(--bd);border:1px solid rgba(10,132,255,.3);border-radius:var(--r);padding:14px;cursor:pointer" onclick="downloadSample()">
-        <div style="font-size:22px;margin-bottom:7px">📥</div>
-        <div style="font-size:12px;font-weight:800;margin-bottom:2px">Tải file mẫu</div>
-        <div style="font-size:10px;color:var(--t2)">CSV chuẩn để điền lịch</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:10px">
+      <div style="background:var(--bd);border:1px solid rgba(10,132,255,.3);border-radius:var(--r);padding:18px;cursor:pointer" onclick="downloadSample()">
+        <div style="font-size:29px;margin-bottom:7px">📥</div>
+        <div style="font-size:16px;font-weight:800;margin-bottom:2px">Tải file mẫu</div>
+        <div style="font-size:13px;color:var(--t2)">CSV chuẩn để điền lịch</div>
       </div>
-      <div style="background:var(--gd);border:1px solid rgba(48,209,88,.3);border-radius:var(--r);padding:14px;cursor:pointer" onclick="document.getElementById('xlsxInput').click()">
-        <div style="font-size:22px;margin-bottom:7px">📤</div>
-        <div style="font-size:12px;font-weight:800;margin-bottom:2px">Tải file lên</div>
-        <div style="font-size:10px;color:var(--t2)">Excel hoặc CSV</div>
+      <div style="background:var(--gd);border:1px solid rgba(48,209,88,.3);border-radius:var(--r);padding:18px;cursor:pointer" onclick="document.getElementById('xlsxInput').click()">
+        <div style="font-size:29px;margin-bottom:7px">📤</div>
+        <div style="font-size:16px;font-weight:800;margin-bottom:2px">Tải file lên</div>
+        <div style="font-size:13px;color:var(--t2)">Excel hoặc CSV</div>
       </div>
     </div>
     <input type="file" id="xlsxInput" accept=".xlsx,.xls,.csv" style="display:none" onchange="handleFileUpload(event)">
-    <div style="background:var(--s1);border:1px solid var(--b1);border-radius:var(--r);padding:12px;margin-bottom:10px;font-size:11px;color:var(--t2);line-height:1.8">
+    <div style="background:var(--s1);border:1px solid var(--b1);border-radius:var(--r);padding:16px;margin-bottom:10px;font-size:14px;color:var(--t2);line-height:1.8">
       <div style="font-weight:800;color:var(--t1);margin-bottom:6px">📋 Format</div>
       <span style="font-family:var(--m);color:var(--blue)">Ngày;Ca;Tên shop</span><br>
       25/05/2026;Sáng;MWG MTHH<br>
       26/05/2026;DAY OFF;
     </div>
-    <div style="display:flex;gap:8px;margin-bottom:12px">
-      <button onclick="resetScheduleCache()" style="flex:1;padding:11px;border-radius:11px;background:var(--rd);border:1px solid rgba(255,69,58,.3);color:var(--red);font-size:11px;font-weight:700;cursor:pointer;font-family:var(--f)">🗑 Xóa cache</button>
-      <button onclick="exportScheduleCSV()" style="flex:1;padding:11px;border-radius:11px;background:var(--s1);border:1px solid var(--b1);color:var(--t2);font-size:11px;font-weight:700;cursor:pointer;font-family:var(--f)">💾 Xuất lịch</button>
+    <div style="display:flex;gap:10px;margin-bottom:12px">
+      <button onclick="resetScheduleCache()" style="flex:1;padding:14px;border-radius:14px;background:var(--rd);border:1px solid rgba(255,69,58,.3);color:var(--red);font-size:14px;font-weight:700;cursor:pointer;font-family:var(--f)">🗑 Xóa cache</button>
+      <button onclick="exportScheduleCSV()" style="flex:1;padding:14px;border-radius:14px;background:var(--s1);border:1px solid var(--b1);color:var(--t2);font-size:14px;font-weight:700;cursor:pointer;font-family:var(--f)">💾 Xuất lịch</button>
     </div>
     <div id="schedulePreview"></div>`;
   renderSchedulePreview();
@@ -2378,26 +2378,26 @@ function renderDtLich(){
 function renderDtTarget(){
   const rows=SHOPS.map(s=>{
     const t=getEffectiveTarget(s.appleId);
-    return`<div style="display:grid;grid-template-columns:1fr 38px 38px 38px 38px 38px;padding:7px 10px;border-bottom:1px solid var(--b1);align-items:center">
-      <div style="font-size:11px;font-weight:700;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${s.sh}</div>
-      ${[t.iphone,t.ipad,t.mac,t.aw,t.ap].map(v=>`<div style="font-size:11px;font-family:var(--m);font-weight:700;text-align:right;color:var(--blue)">${v||0}</div>`).join('')}
+    return`<div style="display:grid;grid-template-columns:1fr 38px 38px 38px 38px 38px;padding:9px 10px;border-bottom:1px solid var(--b1);align-items:center">
+      <div style="font-size:14px;font-weight:700;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${s.sh}</div>
+      ${[t.iphone,t.ipad,t.mac,t.aw,t.ap].map(v=>`<div style="font-size:14px;font-family:var(--m);font-weight:700;text-align:right;color:var(--blue)">${v||0}</div>`).join('')}
     </div>`;
   }).join('');
   document.getElementById('dt-target').innerHTML=`
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-bottom:10px">
-      <div style="background:var(--bd);border:1px solid rgba(10,132,255,.3);border-radius:var(--r);padding:14px;cursor:pointer" onclick="downloadTargetSample()">
-        <div style="font-size:22px;margin-bottom:7px">📥</div><div style="font-size:12px;font-weight:800">Tải file mẫu</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:10px">
+      <div style="background:var(--bd);border:1px solid rgba(10,132,255,.3);border-radius:var(--r);padding:18px;cursor:pointer" onclick="downloadTargetSample()">
+        <div style="font-size:29px;margin-bottom:7px">📥</div><div style="font-size:16px;font-weight:800">Tải file mẫu</div>
       </div>
-      <div style="background:var(--gd);border:1px solid rgba(48,209,88,.3);border-radius:var(--r);padding:14px;cursor:pointer" onclick="document.getElementById('targetInput').click()">
-        <div style="font-size:22px;margin-bottom:7px">📤</div><div style="font-size:12px;font-weight:800">Cập nhật Target</div>
+      <div style="background:var(--gd);border:1px solid rgba(48,209,88,.3);border-radius:var(--r);padding:18px;cursor:pointer" onclick="document.getElementById('targetInput').click()">
+        <div style="font-size:29px;margin-bottom:7px">📤</div><div style="font-size:16px;font-weight:800">Cập nhật Target</div>
       </div>
     </div>
     <input type="file" id="targetInput" accept=".csv" style="display:none" onchange="handleTargetUpload(event)">
-    <div style="font-size:10px;font-weight:800;color:var(--t3);text-transform:uppercase;letter-spacing:.7px;margin-bottom:7px">Target hiện tại</div>
+    <div style="font-size:13px;font-weight:800;color:var(--t3);text-transform:uppercase;letter-spacing:.7px;margin-bottom:7px">Target hiện tại</div>
     <div style="background:var(--s1);border:1px solid var(--b1);border-radius:var(--r);overflow:hidden">
-      <div style="display:grid;grid-template-columns:1fr 38px 38px 38px 38px 38px;padding:7px 10px;background:var(--s2);border-bottom:1px solid var(--b1)">
-        <div style="font-size:9px;font-weight:800;color:var(--t3)">Shop</div>
-        ${['iPh','iPad','Mac','AW','AP'].map(h=>`<div style="font-size:9px;font-weight:800;color:var(--t3);text-align:right">${h}</div>`).join('')}
+      <div style="display:grid;grid-template-columns:1fr 38px 38px 38px 38px 38px;padding:9px 10px;background:var(--s2);border-bottom:1px solid var(--b1)">
+        <div style="font-size:12px;font-weight:800;color:var(--t3)">Shop</div>
+        ${['iPh','iPad','Mac','AW','AP'].map(h=>`<div style="font-size:12px;font-weight:800;color:var(--t3);text-align:right">${h}</div>`).join('')}
       </div>${rows}
     </div>`;
 }
@@ -2407,31 +2407,31 @@ function renderDtSales(){
     const q=SALES_Q1[s.appleId]||{iphone:0};
     const inputs=['iphone','ipad','mac','aw','ap'].map((k,i)=>`
       <div>
-        <div style="font-size:9px;text-align:center;margin-bottom:3px">${['📱','📟','💻','⌚','🎧'][i]}</div>
+        <div style="font-size:12px;text-align:center;margin-bottom:3px">${['📱','📟','💻','⌚','🎧'][i]}</div>
         <input type="number" min="0" placeholder="0" id="sw-${s.appleId}-${k}"
-          style="width:100%;padding:6px 3px;background:var(--s2);border:1px solid var(--b1);border-radius:7px;color:var(--t1);font-size:12px;font-weight:700;font-family:var(--m);text-align:center;outline:none"/>
+          style="width:100%;padding:8px 3px;background:var(--s2);border:1px solid var(--b1);border-radius:9px;color:var(--t1);font-size:16px;font-weight:700;font-family:var(--m);text-align:center;outline:none"/>
       </div>`).join('');
-    return`<div style="background:var(--s1);border:1px solid var(--b1);border-radius:var(--r);padding:11px 12px;margin-bottom:7px">
-      <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
-        ${chainLogo(s.chain,20)}<div style="font-size:12px;font-weight:700;flex:1">${s.sh}</div>
-        <div style="font-size:9px;font-family:var(--m);color:var(--t3)">QTD: ${q.iphone||0}</div>
+    return`<div style="background:var(--s1);border:1px solid var(--b1);border-radius:var(--r);padding:14px 12px;margin-bottom:7px">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+        ${chainLogo(s.chain,20)}<div style="font-size:16px;font-weight:700;flex:1">${s.sh}</div>
+        <div style="font-size:12px;font-family:var(--m);color:var(--t3)">QTD: ${q.iphone||0}</div>
       </div>
-      <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:5px">${inputs}</div>
+      <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:6px">${inputs}</div>
     </div>`;
   }).join('');
   document.getElementById('dt-sales').innerHTML=`
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-bottom:10px">
-      <div style="background:var(--bd);border:1px solid rgba(10,132,255,.3);border-radius:var(--r);padding:14px;cursor:pointer" onclick="downloadSalesSample()">
-        <div style="font-size:22px;margin-bottom:7px">📥</div><div style="font-size:12px;font-weight:800">Tải file mẫu</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:10px">
+      <div style="background:var(--bd);border:1px solid rgba(10,132,255,.3);border-radius:var(--r);padding:18px;cursor:pointer" onclick="downloadSalesSample()">
+        <div style="font-size:29px;margin-bottom:7px">📥</div><div style="font-size:16px;font-weight:800">Tải file mẫu</div>
       </div>
-      <div style="background:var(--gd);border:1px solid rgba(48,209,88,.3);border-radius:var(--r);padding:14px;cursor:pointer" onclick="document.getElementById('salesInput').click()">
-        <div style="font-size:22px;margin-bottom:7px">📤</div><div style="font-size:12px;font-weight:800">Upload Sales</div>
+      <div style="background:var(--gd);border:1px solid rgba(48,209,88,.3);border-radius:var(--r);padding:18px;cursor:pointer" onclick="document.getElementById('salesInput').click()">
+        <div style="font-size:29px;margin-bottom:7px">📤</div><div style="font-size:16px;font-weight:800">Upload Sales</div>
       </div>
     </div>
     <input type="file" id="salesInput" accept=".csv" style="display:none" onchange="handleSalesUpload(event)">
-    <div style="font-size:10px;font-weight:800;color:var(--t3);text-transform:uppercase;letter-spacing:.7px;margin-bottom:8px">📝 Nhập nhanh tuần này</div>
+    <div style="font-size:13px;font-weight:800;color:var(--t3);text-transform:uppercase;letter-spacing:.7px;margin-bottom:8px">📝 Nhập nhanh tuần này</div>
     ${quickRows}
-    <button onclick="saveWeeklySales()" style="width:100%;padding:13px;border-radius:12px;background:var(--blue);border:none;color:white;font-size:13px;font-weight:800;cursor:pointer;font-family:var(--f);margin-top:4px;margin-bottom:12px">💾 Lưu Sales tuần này</button>`;
+    <button onclick="saveWeeklySales()" style="width:100%;padding:17px;border-radius:16px;background:var(--blue);border:none;color:white;font-size:17px;font-weight:800;cursor:pointer;font-family:var(--f);margin-top:4px;margin-bottom:12px">💾 Lưu Sales tuần này</button>`;
 }
 
 function renderDtTeam(){
@@ -2439,53 +2439,53 @@ function renderDtTeam(){
   const lobOpts=['iPhone','iPad','MacBook','Apple Watch','AirPods'].map(l=>`<option>${l}</option>`).join('');
   const scoreInputs=[['KT SP','ns-kt'],['Tư vấn','ns-tv'],['Demo','ns-demo']].map(([l,id])=>`
     <div>
-      <label style="font-size:10px;font-weight:700;color:var(--t3);display:block;margin-bottom:4px">${l} (1-5)</label>
-      <input id="${id}" type="number" min="1" max="5" value="3" style="width:100%;padding:9px 8px;background:var(--s2);border:1px solid var(--b1);border-radius:9px;color:var(--t1);font-size:13px;font-weight:700;font-family:var(--m);text-align:center;outline:none"/>
+      <label style="font-size:13px;font-weight:700;color:var(--t3);display:block;margin-bottom:4px">${l} (1-5)</label>
+      <input id="${id}" type="number" min="1" max="5" value="3" style="width:100%;padding:12px 8px;background:var(--s2);border:1px solid var(--b1);border-radius:12px;color:var(--t1);font-size:17px;font-weight:700;font-family:var(--m);text-align:center;outline:none"/>
     </div>`).join('');
   document.getElementById('dt-team').innerHTML=`
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-bottom:10px">
-      <div style="background:var(--bd);border:1px solid rgba(10,132,255,.3);border-radius:var(--r);padding:14px;cursor:pointer" onclick="downloadTeamSample()">
-        <div style="font-size:22px;margin-bottom:7px">📥</div><div style="font-size:12px;font-weight:800">Tải file mẫu</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:10px">
+      <div style="background:var(--bd);border:1px solid rgba(10,132,255,.3);border-radius:var(--r);padding:18px;cursor:pointer" onclick="downloadTeamSample()">
+        <div style="font-size:29px;margin-bottom:7px">📥</div><div style="font-size:16px;font-weight:800">Tải file mẫu</div>
       </div>
-      <div style="background:var(--gd);border:1px solid rgba(48,209,88,.3);border-radius:var(--r);padding:14px;cursor:pointer" onclick="document.getElementById('teamInput').click()">
-        <div style="font-size:22px;margin-bottom:7px">📤</div><div style="font-size:12px;font-weight:800">Cập nhật Team</div>
+      <div style="background:var(--gd);border:1px solid rgba(48,209,88,.3);border-radius:var(--r);padding:18px;cursor:pointer" onclick="document.getElementById('teamInput').click()">
+        <div style="font-size:29px;margin-bottom:7px">📤</div><div style="font-size:16px;font-weight:800">Cập nhật Team</div>
       </div>
     </div>
     <input type="file" id="teamInput" accept=".csv" style="display:none" onchange="handleTeamUpload(event)">
-    <div style="font-size:10px;font-weight:800;color:var(--t3);text-transform:uppercase;letter-spacing:.7px;margin-bottom:8px">➕ Thêm nhân sự thủ công</div>
-    <div style="background:var(--s1);border:1px solid var(--b1);border-radius:var(--r);padding:13px;margin-bottom:14px">
+    <div style="font-size:13px;font-weight:800;color:var(--t3);text-transform:uppercase;letter-spacing:.7px;margin-bottom:8px">➕ Thêm nhân sự thủ công</div>
+    <div style="background:var(--s1);border:1px solid var(--b1);border-radius:var(--r);padding:17px;margin-bottom:14px">
       <div style="margin-bottom:9px">
-        <label style="font-size:10px;font-weight:700;color:var(--t3);display:block;margin-bottom:4px">Shop</label>
-        <select id="ns-shop" style="width:100%;padding:9px 11px;background:var(--s2);border:1px solid var(--b1);border-radius:9px;color:var(--t1);font-size:12px;font-family:var(--f);outline:none">
+        <label style="font-size:13px;font-weight:700;color:var(--t3);display:block;margin-bottom:4px">Shop</label>
+        <select id="ns-shop" style="width:100%;padding:12px 11px;background:var(--s2);border:1px solid var(--b1);border-radius:12px;color:var(--t1);font-size:16px;font-family:var(--f);outline:none">
           <option value="">— Chọn shop —</option>${shopOpts}
         </select>
       </div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:9px">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:9px">
         <div>
-          <label style="font-size:10px;font-weight:700;color:var(--t3);display:block;margin-bottom:4px">Tên nhân viên</label>
-          <input id="ns-name" type="text" placeholder="Nguyễn Văn A" style="width:100%;padding:9px 11px;background:var(--s2);border:1px solid var(--b1);border-radius:9px;color:var(--t1);font-size:12px;font-family:var(--f);outline:none"/>
+          <label style="font-size:13px;font-weight:700;color:var(--t3);display:block;margin-bottom:4px">Tên nhân viên</label>
+          <input id="ns-name" type="text" placeholder="Nguyễn Văn A" style="width:100%;padding:12px 11px;background:var(--s2);border:1px solid var(--b1);border-radius:12px;color:var(--t1);font-size:16px;font-family:var(--f);outline:none"/>
         </div>
         <div>
-          <label style="font-size:10px;font-weight:700;color:var(--t3);display:block;margin-bottom:4px">AEP Level</label>
-          <select id="ns-level" style="width:100%;padding:9px 11px;background:var(--s2);border:1px solid var(--b1);border-radius:9px;color:var(--t1);font-size:12px;font-family:var(--f);outline:none">
+          <label style="font-size:13px;font-weight:700;color:var(--t3);display:block;margin-bottom:4px">AEP Level</label>
+          <select id="ns-level" style="width:100%;padding:12px 11px;background:var(--s2);border:1px solid var(--b1);border-radius:12px;color:var(--t1);font-size:16px;font-family:var(--f);outline:none">
             <option>Member</option><option>Champion</option><option>Champion+</option>
           </select>
         </div>
       </div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:9px">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:9px">
         <div>
-          <label style="font-size:10px;font-weight:700;color:var(--t3);display:block;margin-bottom:4px">LOBs chính</label>
-          <select id="ns-lob" style="width:100%;padding:9px 11px;background:var(--s2);border:1px solid var(--b1);border-radius:9px;color:var(--t1);font-size:12px;font-family:var(--f);outline:none">${lobOpts}</select>
+          <label style="font-size:13px;font-weight:700;color:var(--t3);display:block;margin-bottom:4px">LOBs chính</label>
+          <select id="ns-lob" style="width:100%;padding:12px 11px;background:var(--s2);border:1px solid var(--b1);border-radius:12px;color:var(--t1);font-size:16px;font-family:var(--f);outline:none">${lobOpts}</select>
         </div>
         <div>
-          <label style="font-size:10px;font-weight:700;color:var(--t3);display:block;margin-bottom:4px">Email</label>
-          <input id="ns-phone" type="email" placeholder="example@gmail.com" style="width:100%;padding:9px 11px;background:var(--s2);border:1px solid var(--b1);border-radius:9px;color:var(--t1);font-size:12px;font-family:var(--f);outline:none"/>
+          <label style="font-size:13px;font-weight:700;color:var(--t3);display:block;margin-bottom:4px">Email</label>
+          <input id="ns-phone" type="email" placeholder="example@gmail.com" style="width:100%;padding:12px 11px;background:var(--s2);border:1px solid var(--b1);border-radius:12px;color:var(--t1);font-size:16px;font-family:var(--f);outline:none"/>
         </div>
       </div>
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:10px">${scoreInputs}</div>
-      <button onclick="addStaffManual()" style="width:100%;padding:12px;border-radius:11px;background:var(--blue);border:none;color:white;font-size:12px;font-weight:800;cursor:pointer;font-family:var(--f)">➕ Thêm nhân sự</button>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:10px">${scoreInputs}</div>
+      <button onclick="addStaffManual()" style="width:100%;padding:16px;border-radius:14px;background:var(--blue);border:none;color:white;font-size:16px;font-weight:800;cursor:pointer;font-family:var(--f)">➕ Thêm nhân sự</button>
     </div>
-    <div style="font-size:10px;font-weight:800;color:var(--t3);text-transform:uppercase;letter-spacing:.7px;margin-bottom:8px">Danh sách nhân sự</div>
+    <div style="font-size:13px;font-weight:800;color:var(--t3);text-transform:uppercase;letter-spacing:.7px;margin-bottom:8px">Danh sách nhân sự</div>
     <div id="teamListPreview"></div>`;
   renderTeamListPreview();
 }
@@ -2550,19 +2550,19 @@ function renderTeamListPreview(){
   const el=document.getElementById('teamListPreview');if(!el)return;
   const allTeam={};SHOPS.forEach(s=>{const t=dynamicTeam[s.appleId]||[];if(t.length)allTeam[s.appleId]={shop:s,team:t};});
   const total=Object.values(allTeam).reduce((a,x)=>a+x.team.length,0);
-  if(!total){el.innerHTML=`<div style="text-align:center;padding:20px;color:var(--t3);font-size:12px">Chưa có nhân sự nào</div>`;return;}
+  if(!total){el.innerHTML=`<div style="text-align:center;padding:26px;color:var(--t3);font-size:16px">Chưa có nhân sự nào</div>`;return;}
   el.innerHTML=Object.values(allTeam).map(({shop:s,team})=>`
     <div style="background:var(--s1);border:1px solid var(--b1);border-radius:var(--r);overflow:hidden;margin-bottom:8px">
-      <div style="background:var(--s2);padding:9px 12px;border-bottom:1px solid var(--b1);display:flex;align-items:center;gap:7px">
-        ${chainLogo(s.chain,18)}<span style="font-size:11px;font-weight:800;flex:1">${s.sh}</span>
-        <span style="font-size:9px;font-family:var(--m);padding:2px 7px;border-radius:5px;background:var(--bd);color:var(--blue)">${team.length} NV</span>
-        <button onclick="clearShopTeam(${s.appleId})" style="font-size:9px;padding:2px 7px;border-radius:5px;background:var(--rd);border:none;color:var(--red);cursor:pointer;font-family:var(--f)">Xóa</button>
+      <div style="background:var(--s2);padding:12px 12px;border-bottom:1px solid var(--b1);display:flex;align-items:center;gap:9px">
+        ${chainLogo(s.chain,18)}<span style="font-size:14px;font-weight:800;flex:1">${s.sh}</span>
+        <span style="font-size:12px;font-family:var(--m);padding:3px 7px;border-radius:6px;background:var(--bd);color:var(--blue)">${team.length} NV</span>
+        <button onclick="clearShopTeam(${s.appleId})" style="font-size:12px;padding:3px 7px;border-radius:6px;background:var(--rd);border:none;color:var(--red);cursor:pointer;font-family:var(--f)">Xóa</button>
       </div>
       ${team.map((p,i)=>`
-        <div style="display:flex;align-items:center;gap:8px;padding:8px 12px;border-bottom:1px solid var(--b1)">
-          <div style="font-size:9px;font-weight:800;padding:2px 6px;border-radius:5px;background:${p.level==='Champion'?'rgba(255,159,10,.2)':'rgba(255,255,255,.06)'};color:${p.level==='Champion'?'var(--orange)':'var(--t3)'}">${p.level==='Champion'?'⭐':'M'}</div>
-          <div style="flex:1"><div style="font-size:12px;font-weight:700">${p.name}</div><div style="font-size:10px;color:var(--t3)">${p.lob}</div></div>
-          <button onclick="removeStaff(${s.appleId},${i})" style="font-size:10px;color:var(--red);background:none;border:none;cursor:pointer;padding:4px">✕</button>
+        <div style="display:flex;align-items:center;gap:10px;padding:10px 12px;border-bottom:1px solid var(--b1)">
+          <div style="font-size:12px;font-weight:800;padding:3px 6px;border-radius:6px;background:${p.level==='Champion'?'rgba(255,159,10,.2)':'rgba(255,255,255,.06)'};color:${p.level==='Champion'?'var(--orange)':'var(--t3)'}">${p.level==='Champion'?'⭐':'M'}</div>
+          <div style="flex:1"><div style="font-size:16px;font-weight:700">${p.name}</div><div style="font-size:13px;color:var(--t3)">${p.lob}</div></div>
+          <button onclick="removeStaff(${s.appleId},${i})" style="font-size:13px;color:var(--red);background:none;border:none;cursor:pointer;padding:5px">✕</button>
         </div>`).join('')}
     </div>`).join('');
 }
@@ -2597,7 +2597,7 @@ function renderHist(){
   const now=new Date();
   const months=[];
   for(let i=1;i>=0;i--){const d=new Date(now.getFullYear(),now.getMonth()-i,1);months.push(d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0'));}
-  if(!scheduleData.length&&!visits.length){el.innerHTML=`<div style="text-align:center;padding:32px 0;color:var(--t3)"><div style="font-size:32px;margin-bottom:9px">📅</div><div style="font-size:13px;font-weight:600;color:var(--t2)">Chưa có lịch sử</div></div>`;return;}
+  if(!scheduleData.length&&!visits.length){el.innerHTML=`<div style="text-align:center;padding:42px 0;color:var(--t3)"><div style="font-size:42px;margin-bottom:9px">📅</div><div style="font-size:17px;font-weight:600;color:var(--t2)">Chưa có lịch sử</div></div>`;return;}
   let html='';
   months.forEach(mo=>{
     const [yr,m]=mo.split('-');
@@ -2605,7 +2605,7 @@ function renderHist(){
     const moVisits=visits.filter(v=>v.date&&v.date.startsWith(mo));
     if(!moRows.length&&!moVisits.length)return;
     const allDays=[...new Set([...moRows.map(r=>r.date),...moVisits.map(v=>v.date)])].sort().reverse();
-    html+=`<div style="margin-bottom:16px"><div style="font-size:10px;font-weight:800;color:var(--t3);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px">Tháng ${parseInt(m)}/${yr}</div>`;
+    html+=`<div style="margin-bottom:16px"><div style="font-size:13px;font-weight:800;color:var(--t3);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px">Tháng ${parseInt(m)}/${yr}</div>`;
     allDays.forEach(date=>{
       const daySchedule=moRows.filter(r=>r.date===date);
       const dayVisits=moVisits.filter(v=>v.date===date);
@@ -2614,24 +2614,24 @@ function renderHist(){
       const isPast=date<today();
       const isOff=daySchedule.some(r=>r.slot==='OFF');
       const workSlots=daySchedule.filter(r=>r.slot!=='OFF');
-      html+=`<div style="padding:11px 13px;border-radius:13px;background:var(--s1);border:1px solid ${isToday?'rgba(10,132,255,.35)':'var(--b1)'};margin-bottom:7px;${isToday?'background:var(--bd)':''}${isOff?';opacity:.5':''}">
+      html+=`<div style="padding:14px 13px;border-radius:17px;background:var(--s1);border:1px solid ${isToday?'rgba(10,132,255,.35)':'var(--b1)'};margin-bottom:7px;${isToday?'background:var(--bd)':''}${isOff?';opacity:.5':''}">
         <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:${isOff?0:7}px">
-          <div style="font-size:11px;font-weight:800;font-family:var(--m);color:${isToday?'var(--blue)':isPast?'var(--t2)':'var(--t3)'}">${isToday?'▶ ':''}${dd}/${dm}/${dy}${isToday?' · Hôm nay':''}</div>
-          <div style="display:flex;gap:5px;align-items:center">
-            ${isOff?`<span style="font-size:9px;font-weight:700;padding:2px 7px;border-radius:5px;background:rgba(255,255,255,.08);color:rgba(255,255,255,.4)">🏖 DAY OFF</span>`:''}
-            ${!isOff&&dayVisits.length?`<span style="font-size:9px;font-weight:700;padding:2px 7px;border-radius:5px;background:var(--gd);color:var(--green)">✓ ${dayVisits.length} visit</span>`:''}
-            ${!isOff&&isPast&&!dayVisits.length&&workSlots.length?`<span style="font-size:9px;font-weight:700;padding:2px 7px;border-radius:5px;background:var(--od);color:var(--orange)">Chưa visit</span>`:''}
+          <div style="font-size:14px;font-weight:800;font-family:var(--m);color:${isToday?'var(--blue)':isPast?'var(--t2)':'var(--t3)'}">${isToday?'▶ ':''}${dd}/${dm}/${dy}${isToday?' · Hôm nay':''}</div>
+          <div style="display:flex;gap:6px;align-items:center">
+            ${isOff?`<span style="font-size:12px;font-weight:700;padding:3px 7px;border-radius:6px;background:rgba(255,255,255,.08);color:rgba(255,255,255,.4)">🏖 DAY OFF</span>`:''}
+            ${!isOff&&dayVisits.length?`<span style="font-size:12px;font-weight:700;padding:3px 7px;border-radius:6px;background:var(--gd);color:var(--green)">✓ ${dayVisits.length} visit</span>`:''}
+            ${!isOff&&isPast&&!dayVisits.length&&workSlots.length?`<span style="font-size:12px;font-weight:700;padding:3px 7px;border-radius:6px;background:var(--od);color:var(--orange)">Chưa visit</span>`:''}
           </div>
         </div>
-        ${!isOff&&workSlots.length?`<div style="display:flex;gap:6px;flex-wrap:wrap">
+        ${!isOff&&workSlots.length?`<div style="display:flex;gap:8px;flex-wrap:wrap">
           ${workSlots.map(r=>{
             const visited=dayVisits.some(v=>v.shop_id===r.shopId);
             const slotC={S:'var(--orange)',C:'var(--blue)',T:'var(--purple)'}[r.slot]||'var(--t3)';
             const slotN={S:'Sáng',C:'Chiều',T:'Tối'}[r.slot]||r.slot;
-            return`<div style="display:flex;align-items:center;gap:5px;background:${visited?'var(--gd)':'var(--s2)'};border:1px solid ${visited?'rgba(48,209,88,.25)':'var(--b1)'};border-radius:8px;padding:5px 9px">
-              <span style="font-size:9px;font-weight:800;color:${slotC}">${slotN}</span>
-              <span style="font-size:11px;font-weight:700">${r.shopSh}</span>
-              ${visited?'<span style="font-size:10px">✓</span>':''}
+            return`<div style="display:flex;align-items:center;gap:6px;background:${visited?'var(--gd)':'var(--s2)'};border:1px solid ${visited?'rgba(48,209,88,.25)':'var(--b1)'};border-radius:10px;padding:6px 9px">
+              <span style="font-size:12px;font-weight:800;color:${slotC}">${slotN}</span>
+              <span style="font-size:14px;font-weight:700">${r.shopSh}</span>
+              ${visited?'<span style="font-size:13px">✓</span>':''}
             </div>`;
           }).join('')}
         </div>`:''}
@@ -2639,13 +2639,13 @@ function renderHist(){
     });
     html+=`</div>`;
   });
-  el.innerHTML=html||`<div style="text-align:center;padding:32px 0;color:var(--t3);font-size:13px">Không có dữ liệu</div>`;
+  el.innerHTML=html||`<div style="text-align:center;padding:42px 0;color:var(--t3);font-size:17px">Không có dữ liệu</div>`;
 }
 
 // ═══════════ TOAST ═══════════
 function toast(msg,dur=2800){
   let t=document.getElementById('toast');
-  if(!t){t=document.createElement('div');t.id='toast';t.style.cssText='position:fixed;bottom:90px;left:50%;transform:translateX(-50%);background:rgba(30,30,35,.95);color:white;padding:10px 18px;border-radius:20px;font-size:12px;font-weight:600;z-index:9999;pointer-events:none;transition:opacity .3s;white-space:nowrap;max-width:90vw;text-align:center;backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.1)';document.body.appendChild(t);}
+  if(!t){t=document.createElement('div');t.id='toast';t.style.cssText='position:fixed;bottom:90px;left:50%;transform:translateX(-50%);background:rgba(30,30,35,.95);color:white;padding:13px 18px;border-radius:26px;font-size:16px;font-weight:600;z-index:9999;pointer-events:none;transition:opacity .3s;white-space:nowrap;max-width:90vw;text-align:center;backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.1)';document.body.appendChild(t);}
   t.textContent=msg;t.style.opacity='1';
   clearTimeout(t._t);t._t=setTimeout(()=>t.style.opacity='0',dur);
 }
